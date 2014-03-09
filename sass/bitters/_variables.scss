@@ -1,0 +1,53 @@
+// Typography
+///////////////////////////////////////////////////////////////////////////////
+$sans-serif: 'Source Sans Pro', $helvetica;
+$serif: $georgia;
+
+$base-font-family: $sans-serif;
+$header-font-family: $base-font-family;
+
+// Sizes
+///////////////////////////////////////////////////////////////////////////////
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+$base-border-radius: em(3);
+
+// Colors
+///////////////////////////////////////////////////////////////////////////////
+
+$blue: #477DCA;
+$dark-gray: #333333;
+$medium-gray: #7C949D;
+$light-gray: #DDD;
+$body: rgb(241,241,243);
+
+
+// Dolphin colors
+$cyan: #35D0FF;
+$cyan: #76C3DF;
+$sidebar:  rgb(232,232,235);
+$text-gray: darken($sidebar, 18%);
+$navy: #0D3440;
+$header: #33545F;
+$dark-navy: darken($navy, 2%);
+$desa-sky: #1A687F;
+
+// Body Color
+$base-body-color: white;
+$base-body-background:$body;
+
+//  Font Colors
+$base-font-color: $medium-gray;
+$base-accent-color: $blue;
+
+//  Text Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+
+// Border color
+$base-border-color: $light-gray;
+
+
+
+
+

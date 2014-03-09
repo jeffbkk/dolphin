@@ -1,0 +1,36 @@
+a,
+a span {
+	 @include transition ( all .15s ease-in-out );}
+
+.content-img,
+.content-text {
+	@include transition ( all .25s ease-in-out );
+}
+
+
+
+
+
+#sidebar.open {
+
+}
+
+
+#main.open {
+	
+}
+
+
+#sidebar.narrow {
+
+}
+
+
+#user-settings.visible {
+	opacity:1;
+	z-index: 4000;
+	top:84px;}
+
+
+
+

@@ -1,0 +1,108 @@
+/*-------------------------------------------------------------------------------
+
+                  CONTENTS ITEMS ANIMATION
+------------------------------------------------------------------------------------*/
+
+
+
+	/*-----------------------------------------------------------------------------------------------
+	 
+	   // CONTENTS OBJECT
+	-------------------------------------------------------------------------------------------------*/
+
+	.contents-items,
+	.fadeinUp {
+		position: relative;
+		display:block;
+		top:0;
+		opacity:0;
+		// @include transition ( top 300ms  cubic-bezier(.65, -1, .25, 2.5));
+		transition: top 300ms cubic-bezier(.65, -1, .25, 2.5);
+		@include animation( fadeinUp 300ms  ease forwards );
+		border-top:24px solid $medium-gray;
+		border-top:24px solid #AA979B;
+		margin-bottom: em(50);
+		&:hover {
+			cursor:pointer;
+			top:-.55em;
+		}
+
+		&:nth-child(3n+3),
+		&:nth-child(5n+1) {
+			@include animation-duration( 500ms );
+		}
+
+		// &.fadeoutDown {
+		// 	@include animation( fadeoutDown 300ms ease forwards );
+		// }
+	}
+
+
+	@include keyframes( fadeinUp ) {
+                        
+                        0% {  opacity:0; @include transform( translateY(2.25em));}
+                        100% {  opacity:1; @include transform( translateY(0) );}
+	}
+
+	.contents-main {
+		@extend .has-shadow;
+	}
+
+	.contents-text,
+	.contents-control {
+		position: relative;
+		padding: em(10) em(10) 0;
+		.edit-contents {
+			position: absolute;
+			top:0;
+			display: block;
+			@include size( 30px );
+			right:0;
+			&:before {
+				left:6px;
+				font-size: em(20);
+				color: $light-gray;
+				color: lighten(#69ADC5, 32%);
+			}
+		}
+                        
+                        a  img{
+                        	max-width: 38px;
+                        }
+
+		h2 {
+			display: block;
+			margin-bottom: em(6);
+		            font-size: em(18);}
+	}
+
+	 .contents-control {
+		background: white;
+		font-size: em(14);
+		padding-bottom: em(10);
+		// margin-top: em(14);
+	}
+
+
+	.hidden {
+		opacity:0;
+		display:none;}
+
+
+             #contents-icon {
+             	background: url(../img/icon/content-medium.svg) no-repeat center center;
+             	border-radius:50%;
+             	opacity:.25;
+             	margin:0 auto 1em;
+             	border:5px solid #9FBAC4;
+             	@include size( 220px );
+             	background-size: 60% auto;
+             }
+
+
+	/*-----------------------------------------------------------------------------------------------
+	 
+	   // CONTENTS CREATE LINK AND ANIMATION
+	-------------------------------------------------------------------------------------------------*/
+
+

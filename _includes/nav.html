@@ -1,0 +1,17 @@
+<nav id ="main-nav">
+  <ul>
+  	{% for link in site.navigation %}
+  	     {% assign current = nil %}
+  	     {% if page.url == link.url %}
+  	          {% assign current = "current" %}
+  	     {% endif %}
+  	     <li class="nav-list">
+  	     	<a class = "{{ current }}" href="{{ link.url }}" title ="{{ link.text }}">
+                <span class ="nav-icon" id ="icon-{{link.text}}"></span>
+                <span class="nav-label">{{ link.text | capitalize }}</span>
+  	     	</a>
+  	     </li>
+  	{% endfor %}
+  </ul>
+</nav>
+   

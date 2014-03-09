@@ -1,0 +1,137 @@
+---
+title: Contents
+layout: default
+content-title: Geekphone
+---
+
+<section class="title">
+	<div class="container">
+		<div class="row">
+			<h1>{{ page.title }}</h1>
+			<!-- <a href="/contents/create" class ="btn create right">Create {{ page.title }} </a> -->
+		</div>
+	</div>
+</section>
+
+<section class ="main-content">
+           
+	<div class="container">
+                       
+                       <div class="filter" id ="filter-contents">
+                       	   <ul id ="sort">
+                       	   	<p>Sort By:</p>
+                       	   	<li><a class ="filters" href="#" data-type="all">All</a></li>
+                       	   	<li><a class ="filters" href="#" data-type="video">Video</a></li>
+                       	   	<li><a class ="filters" href="#" data-type="image">Image</a></li>
+                       	   	<li><a class ="filters" href="#" data-type="url">Url</a></li>
+                       	   	<li><a class ="filters" href="#" data-type="coupon">Coupon</a></li>
+                       	   </ul>
+                       </div>
+
+		<ol class="contents-listing">
+
+
+	                 <li class ="grid-2 contents-items" data-type ="url">
+			<div class="contents-main">
+				<div class ="contents-text">
+				      <a href="#" title ="Edit contents"  class ="edit-contents" data-icon="&#xf040;"></a>
+				       <h2>
+				      	{{ page.content-title | capitalize }}
+				      </h2>
+				      <p>
+				        Lorem ipsum dolor sit amet, consectetur adipisicing...
+				      </p>
+				</div>
+
+				<div class="contents-control">
+				            <dl>
+				            	<dt>Viewed</dt>
+				            	<dd>450</dd>
+				            </dl>
+            
+				            <dl>
+				            	<dt>Given </dt>
+				            	<dd>210</dd>	
+				            </dl>
+            
+				            <dl>
+				            	<dt>Tag </dt>
+				            	<dd>url</dd>	
+				            </dl>
+			           </div>
+				
+			</div>
+		     </li>
+
+		     <li class ="grid-2 contents-items" data-type ="video">
+			<div class="contents-main">
+				<div class ="contents-text">
+				      <a href="#" title ="Edit contents"  class ="edit-contents" data-icon="&#xf040;"></a>
+				       <h2>
+				      	{{ page.content-title | capitalize }}
+				      </h2>
+				      <p>
+				        <a href="#" title ="Title of the coupon">
+				        	<img src="/img/icon/video.svg" alt="" class="icon">
+				        </a>
+				      </p>
+				</div>
+
+				<div class="contents-control">
+				            <dl>
+				            	<dt>Viewed</dt>
+				            	<dd>450</dd>
+				            </dl>
+            
+				            <dl>
+				            	<dt>Given </dt>
+				            	<dd>210</dd>	
+				            </dl>
+            
+				            <dl>
+				            	<dt>Tag </dt>
+				            	<dd>Video</dd>	
+				            </dl>
+			           </div>
+				
+			</div>
+		     </li>
+
+
+		     <li class ="grid-2 contents-items" data-type ="coupon">
+			<div class="contents-main">
+				<div class ="contents-text">
+				      <a href="#" title ="Edit contents"  class ="edit-contents" data-icon="&#xf040;"></a>
+				       <h2>
+				      	{{ page.content-title | capitalize }}
+				      </h2>
+				      <p>
+				        <a href="#" title =" Title of the coupon">
+				        	<img src="/img/icon/coupon.svg" alt="" class="icon">
+				        </a>
+				      </p>
+				</div>
+
+				<div class="contents-control">
+				            <dl>
+				            	<dt>Viewed</dt>
+				            	<dd>450</dd>
+				            </dl>
+            
+				            <dl>
+				            	<dt>Given </dt>
+				            	<dd>210</dd>	
+				            </dl>
+            
+				            <dl>
+				            	<dt>Tag </dt>
+				            	<dd>Coupon</dd>	
+				            </dl>
+			           </div>
+				
+			</div>
+		     </li>
+		     
+		</ol>
+	</div>
+</section>

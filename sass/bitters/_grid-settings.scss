@@ -1,0 +1,31 @@
+// Neat Overrides
+///////////////////////////////////////////////////////////////////////////////
+$column: 90px;
+$gutter: 30px;
+$grid-columns: 12;
+// $max-width: em(1088);
+
+// Neat Breakpoints
+///////////////////////////////////////////////////////////////////////////////
+$tiny-screen: new-breakpoint(min-width em(450) 2);
+$small-screen: new-breakpoint(min-width em(540) 2);
+$medium-screen: new-breakpoint(min-width em(760) 4);
+$large-screen: new-breakpoint(min-width em(920) 12);
+
+
+// MIXIN AlIAS
+///////////////////////////////////////////////////////////////////////////////
+$small:  "(min-width: em(540)";
+$medium: "(min-width: em(760)";
+$large:  "(min-width: em(920)";
+
+// @mixin respond-to($media) {
+// 	@media #{$media} {
+// 		@content;
+// 	}
+// }
+
+
+
+
+

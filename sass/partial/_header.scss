@@ -1,0 +1,90 @@
+#toggle {
+	position: absolute;
+	top:em(10);
+	left:2%;
+	z-index: 800000;
+	background: url(../img/icon/list.svg) no-repeat center center;
+	background-size: 65% auto;
+	display: block;
+	@include size( 52px );}
+
+
+[role="banner"] {
+	background: #33545F;
+	overflow: visible  !important;
+	height: 72px;}
+
+#logo {
+	width: 250px;
+	height: 72px;
+	@include box-shadow( inset 0px  2px 2px rgba(black, .05) );
+	@include inline-block;}
+
+#header-profile {
+	@extend .right;
+	position: relative;
+	padding: 0 4% 0 4%;
+	clear:left;
+	.avatar {
+	    position: relative;
+                
+                img {
+                	margin-top: em(10);
+                	@include size( 52px );
+                	@include inline-block;;
+                	border-radius:50%;
+                }
+
+                figcaption {
+                	font-weight: bold;
+                	line-height: 72px;
+                	margin-left: .5em;
+                	font-size: em(14);
+                	@include inline-block;
+                	vertical-align: top;
+                	a { 
+                		color: white; 
+                                    span {
+			            display:none;
+		                        @include media( $medium-screen ){
+		                        	display: inline;
+		                        }
+		}
+                	}
+                }
+	}
+}
+
+#user-settings {
+	position: absolute;
+	padding: 10px 20px;
+	top:94px;
+	@include transition ( all .27s ease-in-out );
+	margin-left: -55px;
+	border-radius:em(3);
+	opacity:0;
+	color:$medium-gray;
+	left:50%;
+	z-index: -400;
+	a {
+		color:$medium-gray;
+	}
+	&:before {
+	      position: absolute;
+	      top:-14px;
+	      content:'';
+	      display: block;
+	      margin-left: -7px;
+	      left:50%;
+                 @include triangle( 14px, white, up );
+	}
+}
+
+// #header-profile {
+// 	position: fixed;
+// 	top:0;
+// 	z-index: 10000;
+// 	right:0%;
+
+// }
+

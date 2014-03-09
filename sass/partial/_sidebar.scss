@@ -1,0 +1,100 @@
+/*-------------------------------------------------
+// SIDEBAR
+---------------------------------------------------*/
+
+#sidebar {
+    height: 100%;
+    position: fixed;
+    // border-right:3px solid darken($sidebar, 4%);
+    @include box-shadow(  inset 0 4px 4px darken($sidebar, 5%));
+    text-align: center;
+    overflow: hidden;
+    top:0;
+    left:0;
+    left:-160px;
+    z-index: 8000;
+    width: 160px;
+   
+    #logo {
+      width: 100%;
+      background: lighten($header, 3%);
+      height: 72px;
+    }
+
+    nav {  padding-top:  2em; }
+
+    nav  li { position: relative;
+           a {
+              @include transition ( all .22s ease-in-out );
+               display: block; 
+               overflow: hidden;
+               position: relative;
+               vertical-align: middle;
+               padding:1.5em 0;
+               color: $text-gray;
+
+                &:hover,
+                &.current {
+                     color: rgba(#1A687F,.65); }
+
+              &:hover:before,
+              &.current:before {
+                     position: absolute;
+                     content:'';
+                     display: block;
+                     top:50%;
+                     margin-top: -15px;
+                     right:0;
+                     @include triangle( 30px, $base-body-background , left );
+              }
+    
+                &:hover span.nav-icon,
+                &.current span.nav-icon {
+                     @include box-shadow( inset 0 2px 3px rgba(black, .25),0 1px 2px rgba(white, 1));
+                     background-color:  rgba(#1A687F,.35);}
+
+
+               span.nav-label {
+                     text-shadow: 0 1px  0 white;
+               }
+
+            }
+    }
+
+}
+
+
+// .nav-label { display: none; }
+
+/*-------------------------------------------------
+  //ICON OF THE NAV BAR
+-----------------------------------------------------*/
+
+.nav-icon {
+     display: block;
+     margin:0 auto;
+     background: darken($sidebar, 4%);
+     border-radius:50%;
+     @include box-shadow( inset 0 2px 3px rgba(black, .1), 0 1px 2px rgba(white, .85) );
+     @include transition ( all .15s ease-in-out );
+     background-size: 65% auto;
+     background-position: center center;
+     background-repeat: no-repeat;
+     vertical-align: middle;
+     @include size( em(50) );}
+
+     #icon-dashboard {
+     	   background-image: url(../img/icon/dash.svg);}
+
+     #icon-beacons {
+     	   background-image: url(../img/icon/signal.svg);}
+
+     #icon-branches {
+     	   background-image: url(../img/icon/branches.svg);}
+
+     #icon-contents {
+     	   background-image: url(../img/icon/content.svg);}
+
+     #icon-customers {
+     	   background-image: url(../img/icon/user.svg);}
+

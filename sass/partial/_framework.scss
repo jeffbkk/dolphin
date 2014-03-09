@@ -1,0 +1,136 @@
+/*---------------------------------------------------------
+
+// GRID
+
+-----------------------------------------------------------*/
+
+.grid-3,
+.grid-4,
+.grid-5,
+.fill-parent,
+.grid-6,
+.grid-6-8,
+.grid-7,
+.grid-8,
+.grid-9,
+.grid-12 {
+    width: 100%;
+    [role="contentinfo"] &,
+    #services & {
+    	 margin-bottom: $base-line-height *  2.5;
+    }
+}
+
+@include media( $large-screen ) {
+
+   .grid-2 {
+       @include span-columns( 2,12 );
+       @include omega( 6n );
+   }
+
+   .grid-3 {
+   	  @include omega( 4n );
+   	  @include span-columns( 3,12 );
+      [role="contentinfo"] & {
+      	  margin-bottom: 0;
+      }
+   	}
+
+   .grid-4 {
+   	  margin-bottom: 0;
+   	  @include span-columns( 4,12 );}
+
+    .grid-5 {
+       @include span-columns( 5,12 );
+    }
+
+   .grid-6 {
+   	  @include span-columns( 6,12 );
+   	  @include omega( 2n );}
+
+  .grid-6-offset-3 {
+        @include shift( 3 );
+        @include span-columns( 6,12 );
+  }
+
+   .grid-8 {
+   	  @include span-columns( 8,12 );
+   	}
+
+   .fill-parent {
+   		@include fill-parent;}
+
+   .grid-9 {
+   	  @include span-columns( 9,11 );}
+
+}
+
+
+
+/*---------------------------------------------------------
+
+// SECTION
+
+-----------------------------------------------------------*/
+
+section,
+[role="banner"],
+[role="contentinfo"] {
+	  position: relative;
+	  // overflow: hidden;
+	  width: 100%;}
+
+[role="banner"] {
+	  overflow: visible;}
+
+section,
+[role="contentinfo"] {
+	@include clearfix;
+	padding: 2.5em 0;
+}
+
+section {
+	@include clearfix;
+      &.empty {
+           text-align: center;
+           padding: 6em 0;
+      }
+}
+
+#wrapper {
+	overflow: hidden;
+	position: relative;
+	z-index: 400;
+      height: 100%;
+	width: 100%;
+
+      #main {
+        position: relative;
+      }
+}
+
+
+/*---------------------------------------------------------
+
+// CLASS CONTAINER
+
+-----------------------------------------------------------*/
+
+.container {
+	@include outer-container;
+	width: 96%;
+	margin:0 auto;
+	max-width: 96%;
+	padding: 0 flex-gutter(  ) /2;}
+
+/*---------------------------------------------------------
+
+// MAIN OBJECT BACKGROUND COLOR
+
+-----------------------------------------------------------*/
+
+
+
+
+
+

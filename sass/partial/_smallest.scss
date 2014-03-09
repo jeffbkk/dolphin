@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+	@include box-sizing( border-box );}
+
+body {
+	width: 100%;
+	background: $base-body-background;
+            font-family: 'Open Sans', $helvetica;
+            font-family: 'Source Sans Pro', $helvetica;
+            font-smooth: subpixel-antialiased;
+            font-size: 100%;
+            -ms-overflow-x: hidden;
+            overflow-x: hidden;
+            
+            font-weight: normal;
+            line-height: 1.5;}
+
+
+.form-container {
+	position: relative;
+	@extend .has-shadow;
+	margin: 46px auto 0;
+	padding: 1.5em;
+	max-width: 440px;}
+
+
+
+
+
