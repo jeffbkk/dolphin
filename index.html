@@ -3,10 +3,10 @@ title: login
 layout: login
 ---
 
-<section id="login-logo">
+<section id="login-logo" class ="half">
 
    <div class="container">
-   	  <div id="dolphin">
+   	  <div id="login-dolphin-logo">
 		<a href="#">
 			<img src="img/logo.png" alt="logo">
 		</a>
@@ -17,18 +17,23 @@ layout: login
 
 
 
-<section id="login-form" >
+<section id="login-form" class ="half">
 
     <div class="container">
     	
          <div id="login-form-container" class ="form-container">
+
+               <header>
+               	<h2>Welcome</h2>
+               	<h3>Please log in</h3>
+               </header>
     	  
-    	    <form action="/" method ="get">
+    	    <form action="/" method ="post">
 		    
 		        <ul>
 		        	<li>
 		        		<label for="email">Email</label>
-		        		<input type="email" name="email" id="email" required placeholder="Email">
+		        		<input type="email" name="email" id="email" required placeholder="Email" autofocus>
 		        	</li>
         
 		        	<li>
@@ -37,16 +42,14 @@ layout: login
 		        	</li>
         
 		        	<li>
-		        		<input type="submit" id="login-submit" value="Log in"> or <a href="#" class ="aborded"> Recover my Password</a>
+		        		<input type="submit" id="login-submit" value="Log in"> <!-- or <a href="#" class ="aborded"> Recover my Password</a> -->
 		        	</li>
 		        </ul>
 	   </form>
 
-    </div>
+        </div>
 
     </div>
-
-    
 	
 </section>
 

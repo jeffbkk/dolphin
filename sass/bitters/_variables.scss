@@ -29,6 +29,7 @@ $sidebar:  rgb(232,232,235);
 $text-gray: darken($sidebar, 18%);
 $navy: #0D3440;
 $header: #33545F;
+$header: #3FA9F5;
 $dark-navy: darken($navy, 2%);
 $desa-sky: #1A687F;
 
@@ -45,7 +46,7 @@ $base-link-color: $base-accent-color;
 $hover-link-color: darken($base-accent-color, 15);
 
 // Border color
-$base-border-color: $light-gray;
+$base-border-color: rgba(black, .14)
 
 
 

@@ -1,108 +1,175 @@
-/*-------------------------------------------------------------------------------
 
-                  CONTENTS ITEMS ANIMATION
-------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------
+ 
+   // CONTENTS OBJECT
+-------------------------------------------------------------------------------------------------*/
+.contents-items,
+.fadeinUp {
+	position: relative;
+	display:block;
+	top:0;
+	opacity:0;
+	@include transition ( top 300ms  cubic-bezier(.65, -1, .25, 2.5));
+	@include animation( fadeinUp 300ms  ease forwards );
+	margin-bottom: em(50);
+	&:hover {
+		cursor:pointer;
+		top:-.55em;
+	}
 
+	&:hover .edit-contents:before {
+                       color: #EBF1F4;
+	}
+	&:nth-child(3n+3),
+	&:nth-child(5n+1) {
+		@include animation-duration( 500ms );
+	}
+}
 
+@include keyframes( fadeinUp ) {
+                       0% {  opacity:0; @include transform( translateY(2.25em));}
+                       100% {  opacity:1; @include transform( translateY(0));}
+}
 
-	/*-----------------------------------------------------------------------------------------------
-	 
-	   // CONTENTS OBJECT
-	-------------------------------------------------------------------------------------------------*/
-
-	.contents-items,
-	.fadeinUp {
-		position: relative;
-		display:block;
-		top:0;
-		opacity:0;
-		// @include transition ( top 300ms  cubic-bezier(.65, -1, .25, 2.5));
-		transition: top 300ms cubic-bezier(.65, -1, .25, 2.5);
-		@include animation( fadeinUp 300ms  ease forwards );
-		border-top:24px solid $medium-gray;
-		border-top:24px solid #AA979B;
-		margin-bottom: em(50);
-		&:hover {
-			cursor:pointer;
-			top:-.55em;
+.contents-main {
+	@extend .has-shadow;}
+          
+           .contents-title,
+           .contents-text {
+                  padding: em(10) em(10) 0;
+           }
+           .edit-contents {
+		position: absolute;
+		top:em(10);
+		@include transition ( all .25s ease-in-out );
+		// background: transparent;
+		border-radius:em(3);
+		display: block;
+		@include size( 30px );
+		right:0;
+		&:before {
+			left:6px;
+			@include transition ( all .25s ease-in-out );
+			font-size: em(20);
+			color:white;
 		}
 
-		&:nth-child(3n+3),
-		&:nth-child(5n+1) {
-			@include animation-duration( 500ms );
+		&:hover:before {
+			color:red;
 		}
+	}
+           
+.contents-text,
+.contents-control {
+	position: relative;
+	h2 {
+		display: block;
+		margin-bottom: .375em;
+	            font-size: 1.125em}
+}
+ .contents-control {
+	font-size: em(14);
+	padding: em(10);
+}
 
-		// &.fadeoutDown {
-		// 	@include animation( fadeoutDown 300ms ease forwards );
-		// }
+.hidden {
+	opacity:0;
+	display:none;}
+
+ #contents-icon {
+ 	background: url(../img/icon/content-medium.svg) no-repeat center center;
+ 	border-radius:50%;
+ 	opacity:.25;
+ 	margin:0 auto 1em;
+ 	border:.5em solid #9FBAC4;
+ 	@include size( 13.75em );
+ 	background-size: 60% auto;
+ }
+/*-----------------------------------------------------------------------------------------------
+ 
+   // CONTENTS LINK FOR INDICATES TYPE OF CONTENTS
+-------------------------------------------------------------------------------------------------*/
+
+
+// .polaroid-icon {
+// 	background: url(../img/icon/polaroid.svg) ;}
+            
+
+// .video-icon {
+// 	background: url(../img/icon/video.svg) ;}
+
+// .link-icon {
+// 	background: url(../img/icon/link.svg) ;}
+
+// .coupon-icon {
+// 	background: url(../img/icon/coupon.svg) ;}
+
+// .view-icon {
+// 	background-color: #548B9F !important;
+// 	background: url(../img/icon/view.svg);} 
+
+// .given-icon {
+// 	background-color: #548B9F !important;
+// 	background: url(../img/icon/gift.svg);}
+
+
+// .icon-type {
+// 	border-radius:50%;
+// 	display: block;
+// 	color:#BDDAE4;
+// 	background-color: #BDDAE4;
+// 	background-position: center center;
+// 	background-size: 18px auto;
+// 	background-repeat: no-repeat;
+// 	@include size( 30px );
+// 	span {
+// 		@include inline-block;
+// 		line-height:30px;
+// 		padding-left: 36px;
+// 	}
+
+	
+// }
+
+
+
+.polaroid-icon {
+	background: url(../img/icon/polaroid.svg) ;}
+            
+
+.video-icon {
+	background: url(../img/icon/video.svg) ;}
+
+.link-icon {
+	background: url(../img/icon/link.svg) ;}
+
+.coupon-icon {
+	background: url(../img/icon/coupon.svg) ;}
+
+.view-icon {
+	background-color: #BDDAE4 !important;
+	background: url(../img/icon/view.svg);} 
+
+.given-icon {
+	background-color: #BDDAE4 !important;
+	background: url(../img/icon/gift.svg);}
+
+
+.icon-type {
+	border-radius:50%;
+	display: block;
+	color:#BDDAE4;
+	color:#548B9F;
+	background-color: #548B9F;
+	background-position: center center;
+	background-size: 18px auto;
+	background-repeat: no-repeat;
+	@include size( 30px );
+	span {
+		@include inline-block;
+		line-height:30px;
+		padding-left: 36px;
 	}
 
-
-	@include keyframes( fadeinUp ) {
-                        
-                        0% {  opacity:0; @include transform( translateY(2.25em));}
-                        100% {  opacity:1; @include transform( translateY(0) );}
-	}
-
-	.contents-main {
-		@extend .has-shadow;
-	}
-
-	.contents-text,
-	.contents-control {
-		position: relative;
-		padding: em(10) em(10) 0;
-		.edit-contents {
-			position: absolute;
-			top:0;
-			display: block;
-			@include size( 30px );
-			right:0;
-			&:before {
-				left:6px;
-				font-size: em(20);
-				color: $light-gray;
-				color: lighten(#69ADC5, 32%);
-			}
-		}
-                        
-                        a  img{
-                        	max-width: 38px;
-                        }
-
-		h2 {
-			display: block;
-			margin-bottom: em(6);
-		            font-size: em(18);}
-	}
-
-	 .contents-control {
-		background: white;
-		font-size: em(14);
-		padding-bottom: em(10);
-		// margin-top: em(14);
-	}
-
-
-	.hidden {
-		opacity:0;
-		display:none;}
-
-
-             #contents-icon {
-             	background: url(../img/icon/content-medium.svg) no-repeat center center;
-             	border-radius:50%;
-             	opacity:.25;
-             	margin:0 auto 1em;
-             	border:5px solid #9FBAC4;
-             	@include size( 220px );
-             	background-size: 60% auto;
-             }
-
-
-	/*-----------------------------------------------------------------------------------------------
-	 
-	   // CONTENTS CREATE LINK AND ANIMATION
-	-------------------------------------------------------------------------------------------------*/
-
-
+	
+}

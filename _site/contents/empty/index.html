@@ -5,7 +5,7 @@
 <!-- Always force latest IE rendering engine or request Chrome Frame -->
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
-<title>Create Contents</title>
+<title>Contents</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,18 +22,9 @@
 
   <div id="wrapper">
 
-      <a href="#" id ="toggle"></a>
+      <!-- <a href="#" id ="toggle"></a> -->
 
       <div id="sidebar">
-
-         <div id="logo">
-                     <h1>
-                      <a href="/">
-                         <!-- <img src="/img/logo.jpg" alt="Logo"> -->
-                     </a>
-                     </h1>
-                </div>
-
          <nav id ="main-nav">
   <ul>
   	
@@ -88,6 +79,13 @@
       </div>
 
       <header role ="banner" id ="main-header">
+
+              <div id="logo">
+                     <h1>
+                      <a href="/dashboard">
+                     </a>
+                     </h1>
+              </div>
          
                <div  id ="header-profile">
                    <figure class ="avatar">
@@ -96,19 +94,20 @@
                            <a href="#" data-icon="&#xf0d7;" class ="avatar-link"><span>Jeff<span></a>
                      </figcaption>
                    </figure>
-                   
-                   <div id="user-settings">
-         
-                         <ul id ="header-settings">
-                              <li><a href="#" data-icon="&#xf007;">View Profile</a></li>
-                              <li><a href="#" data-icon="&#xf011;">Log out</a></li>
-                         </ul>
-                   </div>
-         
-         
                </div>
+
+
+             <!--  <div id="user-settings">
+                          <ul id ="header-settings">
+                              <li><a href="#" data-icon="&#xf007;"><span>View Profile</span></a></li>
+                              <li><a href="#" data-icon="&#xf011;"><span>Log out</span></a></li>
+                         </ul>
+              </div> -->
+
          
       </header>
+
+
 
       <div id="main">
 
@@ -141,8 +140,8 @@
   <section class="title">
 	<div class="container">
 		<div class="row">
-			<h1>Create Contents</h1>
-			<a href="/contents/create" class ="btn create right">Create Contents </a>
+			<h1>Contents</h1>
+			<a href="/contents/create" class ="btn create right">Create contents </a>
 		</div>
 	</div>
 </section>
@@ -150,8 +149,8 @@
 <section class ="main-contents empty">
 	<div class="container">
 		<div class="grid-6-offset-3">
-		            <div id="contents-icon"></div>
-			<h2>You have no Contents created</h2>	
+		            <div id ="contents-icon"></div>
+			<h2>You have no contents created</h2>	
 			<p>Create some by clicking the button on top</p>
 		</div>
 	</div>
@@ -162,6 +161,7 @@
      </div><!-- End wrapper -->
        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <script src="/javascript/app.js"></script>
+  <script src="/javascript/helper.js"></script>
     <script>document.write('<script src="http://' + (location.host || 'localhost')
 .split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </body>

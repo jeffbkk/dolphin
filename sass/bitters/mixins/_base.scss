@@ -1,1 +1,10 @@
 @import "flash";
+
+
+
+
+@mixin omega-reset($nth,$num-col) {
+	 &:nth-child(#{$nth}) { margin-right:flex-gutter($num-col);}
+	 &:nth-child(#{$nth}+1) { clear:none; }
+
+}

@@ -7,6 +7,10 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color
 $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
 
+form {
+  margin-top: 1em;
+}
+
 // .tsh {
 //   text-shadow: 0 -1px  0 rgba(black, .35);}
 
@@ -42,32 +46,31 @@ label {
 }
 
 form li {
-  margin-bottom: $base-line-height;
+  margin-bottom: $base-line-height * 1.25;
   &:last-child { margin-bottom: 0; }
 }
 
 textarea,
 #{$all-text-inputs} {
-  @include box-sizing(border-box);
-  @include transition(border-color);
   background-color: white;
-  // border-radius: $form-border-radius;
-  border: 1px  dashed lighten($medium-gray, 30%);
+  border-radius:$form-border-radius/2;
   // box-shadow: $form-box-shadow;
+  @include transition ( all .25s ease );
+  border:1px dashed $form-border-color;
   font-family: $form-font-family;
-  @include box-shadow( 0  0  0 6px lighten($light-gray, 9%)  );
+  @include box-shadow( 0  0  0 6px lighten($light-gray, 6%)  );
   font-size: $form-font-size;
   margin-bottom: $base-line-height / 2;
-  padding: ($base-line-height / 2) ($base-line-height / 3);
+  padding: ($base-line-height / 1.75) ($base-line-height / 3);
   // resize: vertical;
   width: 100%;
 
   &:hover {
-    // border-color: $form-border-color-hover;
+    border-color: $form-border-color-hover;
   }
 
   &:focus {
-    // border-color: $form-border-color-focus;
+    border-color: $form-border-color-hover;
     @include placeholder { opacity:0; visibility: hidden; };
     // box-shadow: $form-box-shadow-focus;
     outline: none;
@@ -100,19 +103,20 @@ select {
 
 button,
 input[type="submit"] {
-  // @extend %button;
   border:0;
-  @include inline-block;
-  @include appearance(none);
+  display: block;
+  width: 100%;
+  margin: 1.5em 0  .75em;
+  @include transition ( background .3s ease );
   cursor: pointer;
   user-select: none;
-  background: $medium-gray;
-  // font-weight: bold;
+  background: #BDDAE4;
+  font-weight: bold;
   color:white;
-  padding: .5em 1.75em;
+  padding: 1em 3.75em;
   border-radius:3px;
-  vertical-align: middle;
-  white-space: nowrap;
+  &:hover {
+       background: darken(#BDDAE4, 14%);}
 }
 
 .content-type {

@@ -22,18 +22,9 @@
 
   <div id="wrapper">
 
-      <a href="#" id ="toggle"></a>
+      <!-- <a href="#" id ="toggle"></a> -->
 
       <div id="sidebar">
-
-         <div id="logo">
-                     <h1>
-                      <a href="/">
-                         <!-- <img src="/img/logo.jpg" alt="Logo"> -->
-                     </a>
-                     </h1>
-                </div>
-
          <nav id ="main-nav">
   <ul>
   	
@@ -88,6 +79,13 @@
       </div>
 
       <header role ="banner" id ="main-header">
+
+              <div id="logo">
+                     <h1>
+                      <a href="/dashboard">
+                     </a>
+                     </h1>
+              </div>
          
                <div  id ="header-profile">
                    <figure class ="avatar">
@@ -96,19 +94,20 @@
                            <a href="#" data-icon="&#xf0d7;" class ="avatar-link"><span>Jeff<span></a>
                      </figcaption>
                    </figure>
-                   
-                   <div id="user-settings">
-         
-                         <ul id ="header-settings">
-                              <li><a href="#" data-icon="&#xf007;">View Profile</a></li>
-                              <li><a href="#" data-icon="&#xf011;">Log out</a></li>
-                         </ul>
-                   </div>
-         
-         
                </div>
+
+
+             <!--  <div id="user-settings">
+                          <ul id ="header-settings">
+                              <li><a href="#" data-icon="&#xf007;"><span>View Profile</span></a></li>
+                              <li><a href="#" data-icon="&#xf011;"><span>Log out</span></a></li>
+                         </ul>
+              </div> -->
+
          
       </header>
+
+
 
       <div id="main">
 
@@ -146,6 +145,7 @@
      </div><!-- End wrapper -->
        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <script src="/javascript/app.js"></script>
+  <script src="/javascript/helper.js"></script>
     <script>document.write('<script src="http://' + (location.host || 'localhost')
 .split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </body>

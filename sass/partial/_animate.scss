@@ -26,10 +26,10 @@ a span {
 }
 
 
-#user-settings.visible {
+[role="banner"].visible {
 	opacity:1;
-	z-index: 4000;
-	top:84px;}
+	height: 144px;
+	z-index: 4000;}
 
 
 

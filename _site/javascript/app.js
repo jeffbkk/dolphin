@@ -5,14 +5,14 @@ $(function() {
             contentListing =$('.contents-listing'),
             contentList =$('.contents-items'),
 	      filters = $('.filters'),
-	      hs = $('#user-settings'),
+	      h = $('header:first'),
 	      wrapper = $('#wrapper'),
 	      main = $('#main');
 
 
                   pl.bind('click', function(){
                   	// alert('yes');
-                  	hs.toggleClass('visible');
+                  	h.toggleClass('visible');
                   	return false;
                   });
 

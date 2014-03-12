@@ -1,5 +1,6 @@
 ---
-title: Contents
+title: Contents List
+link: Create Contents
 layout: default
 content-title: Geekphone
 ---
@@ -8,7 +9,7 @@ content-title: Geekphone
 	<div class="container">
 		<div class="row">
 			<h1>{{ page.title }}</h1>
-			<!-- <a href="/contents/create" class ="btn create right">Create {{ page.title }} </a> -->
+			<a href="/contents/create" class ="btn create right">{{ page.link}} </a>
 		</div>
 	</div>
 </section>
@@ -31,35 +32,30 @@ content-title: Geekphone
 		<ol class="contents-listing">
 
 
-	                 <li class ="grid-2 contents-items" data-type ="url">
+	                 <li class ="grid-2 contents-items" data-type ="coupon">
 			<div class="contents-main">
 				<div class ="contents-text">
 				      <a href="#" title ="Edit contents"  class ="edit-contents" data-icon="&#xf040;"></a>
-				       <h2>
-				      	{{ page.content-title | capitalize }}
-				      </h2>
-				      <p>
-				        Lorem ipsum dolor sit amet, consectetur adipisicing...
-				      </p>
+				       <h3>
+				      	<a href="#" class ="icon-type link-icon"><span class ="tag-type">Url</span></a>
+				      </h3>
+				</div>
+				<div class="contents-block">
+				     <img src="/img/assets/test.jpg" alt="" class="">
 				</div>
 
 				<div class="contents-control">
 				            <dl>
-				            	<dt>Viewed</dt>
-				            	<dd>450</dd>
+				            	<dt class ="icon-type view-icon">Viewed</dt>
+				            	<dd class ="view-val">450</dd>
 				            </dl>
             
 				            <dl>
-				            	<dt>Given </dt>
-				            	<dd>210</dd>	
+				            	<dt class ="icon-type given-icon">Given </dt>
+				            	<dd class ="given-val">210</dd>	
 				            </dl>
             
-				            <dl>
-				            	<dt>Tag </dt>
-				            	<dd>url</dd>	
-				            </dl>
 			           </div>
-				
 			</div>
 		     </li>
 
@@ -67,68 +63,223 @@ content-title: Geekphone
 			<div class="contents-main">
 				<div class ="contents-text">
 				      <a href="#" title ="Edit contents"  class ="edit-contents" data-icon="&#xf040;"></a>
-				       <h2>
-				      	{{ page.content-title | capitalize }}
-				      </h2>
+				       <h3>
+				      	<a href="#" class ="icon-type video-icon"><span class ="tag-type">Video</span></a>
+				      </h3>
+				</div>
+
+				<div class="contents-control">
+				            <dl>
+				            	<dt class ="icon-type view-icon">Viewed</dt>
+				            	<dd class ="view-val">450</dd>
+				            </dl>
+            
+				            <dl>
+				            	<dt class ="icon-type given-icon">Given </dt>
+				            	<dd class ="given-val">210</dd>	
+				            </dl>
+            
+			           </div>
+			</div>
+		     </li>
+
+		     <li class ="grid-2 contents-items" data-type ="image">
+			<div class="contents-main">
+				<div class ="contents-title">
+				      <a href="#" title ="Edit contents"  class ="edit-contents" data-icon="&#xf040;"></a>
+				       <h3>
+				           <a href="" class=" icon-type polaroid-icon"><span class="tag-type">Image</span></a>
+				      </h3>
+				</div>
+				<div class="contents-block">
+				     <img src="/img/assets/test.jpg" alt="" class="">
+				</div>
+				<div class="contents-text">
 				      <p>
-				        <a href="#" title ="Title of the coupon">
-				        	<img src="/img/icon/video.svg" alt="" class="icon">
-				        </a>
+				        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 				      </p>
 				</div>
 
 				<div class="contents-control">
 				            <dl>
-				            	<dt>Viewed</dt>
-				            	<dd>450</dd>
+				            	<dt class ="icon-type view-icon">Viewed</dt>
+				            	<dd class ="view-val">450</dd>
 				            </dl>
             
 				            <dl>
-				            	<dt>Given </dt>
-				            	<dd>210</dd>	
+				            	<dt class ="icon-type given-icon">Given </dt>
+				            	<dd class ="given-val">210</dd>	
 				            </dl>
             
-				            <dl>
-				            	<dt>Tag </dt>
-				            	<dd>Video</dd>	
-				            </dl>
 			           </div>
-				
 			</div>
 		     </li>
-
 
 		     <li class ="grid-2 contents-items" data-type ="coupon">
 			<div class="contents-main">
 				<div class ="contents-text">
 				      <a href="#" title ="Edit contents"  class ="edit-contents" data-icon="&#xf040;"></a>
-				       <h2>
-				      	{{ page.content-title | capitalize }}
-				      </h2>
-				      <p>
-				        <a href="#" title =" Title of the coupon">
-				        	<img src="/img/icon/coupon.svg" alt="" class="icon">
-				        </a>
-				      </p>
+				       <h3>
+				      	<a href="#" class ="icon-type coupon-icon"><span class ="tag-type">Coupon</span></a>
+				      </h3>
 				</div>
 
 				<div class="contents-control">
 				            <dl>
-				            	<dt>Viewed</dt>
-				            	<dd>450</dd>
+				            	<dt class ="icon-type view-icon">Viewed</dt>
+				            	<dd class ="view-val">450</dd>
 				            </dl>
             
 				            <dl>
-				            	<dt>Given </dt>
-				            	<dd>210</dd>	
+				            	<dt class ="icon-type given-icon">Given </dt>
+				            	<dd class ="given-val">210</dd>	
 				            </dl>
             
-				            <dl>
-				            	<dt>Tag </dt>
-				            	<dd>Coupon</dd>	
-				            </dl>
 			           </div>
-				
+			</div>
+		     </li>
+
+		     <li class ="grid-2 contents-items" data-type ="coupon">
+			<div class="contents-main">
+				<div class ="contents-text">
+				      <a href="#" title ="Edit contents"  class ="edit-contents" data-icon="&#xf040;"></a>
+				       <h3>
+				      	<a href="#" class ="icon-type coupon-icon"><span class ="tag-type">Coupon</span></a>
+				      </h3>
+				</div>
+
+				<div class="contents-control">
+				            <dl>
+				            	<dt class ="icon-type view-icon">Viewed</dt>
+				            	<dd class ="view-val">450</dd>
+				            </dl>
+            
+				            <dl>
+				            	<dt class ="icon-type given-icon">Given </dt>
+				            	<dd class ="given-val">210</dd>	
+				            </dl>
+            
+			           </div>
+			</div>
+		     </li>
+
+		     <li class ="grid-2 contents-items" data-type ="coupon">
+			<div class="contents-main">
+				<div class ="contents-text">
+				      <a href="#" title ="Edit contents"  class ="edit-contents" data-icon="&#xf040;"></a>
+				       <h3>
+				      	<a href="#" class ="icon-type coupon-icon"><span class ="tag-type">Coupon</span></a>
+				      </h3>
+				</div>
+
+				<div class="contents-control">
+				            <dl>
+				            	<dt class ="icon-type view-icon">Viewed</dt>
+				            	<dd class ="view-val">450</dd>
+				            </dl>
+            
+				            <dl>
+				            	<dt class ="icon-type given-icon">Given </dt>
+				            	<dd class ="given-val">210</dd>	
+				            </dl>
+            
+			           </div>
+			</div>
+		     </li>
+
+		     <li class ="grid-2 contents-items" data-type ="coupon">
+			<div class="contents-main">
+				<div class ="contents-text">
+				      <a href="#" title ="Edit contents"  class ="edit-contents" data-icon="&#xf040;"></a>
+				       <h3>
+				      	<a href="#" class ="icon-type coupon-icon"><span class ="tag-type">Coupon</span></a>
+				      </h3>
+				</div>
+
+				<div class="contents-control">
+				            <dl>
+				            	<dt class ="icon-type view-icon">Viewed</dt>
+				            	<dd class ="view-val">450</dd>
+				            </dl>
+            
+				            <dl>
+				            	<dt class ="icon-type given-icon">Given </dt>
+				            	<dd class ="given-val">210</dd>	
+				            </dl>
+            
+			           </div>
+			</div>
+		     </li>
+
+		     <li class ="grid-2 contents-items" data-type ="coupon">
+			<div class="contents-main">
+				<div class ="contents-text">
+				      <a href="#" title ="Edit contents"  class ="edit-contents" data-icon="&#xf040;"></a>
+				       <h3>
+				      	<a href="#" class ="icon-type coupon-icon"><span class ="tag-type">Coupon</span></a>
+				      </h3>
+				</div>
+
+				<div class="contents-control">
+				            <dl>
+				            	<dt class ="icon-type view-icon">Viewed</dt>
+				            	<dd class ="view-val">450</dd>
+				            </dl>
+            
+				            <dl>
+				            	<dt class ="icon-type given-icon">Given </dt>
+				            	<dd class ="given-val">210</dd>	
+				            </dl>
+            
+			           </div>
+			</div>
+		     </li>
+
+		     <li class ="grid-2 contents-items" data-type ="coupon">
+			<div class="contents-main">
+				<div class ="contents-text">
+				      <a href="#" title ="Edit contents"  class ="edit-contents" data-icon="&#xf040;"></a>
+				       <h3>
+				      	<a href="#" class ="icon-type coupon-icon"><span class ="tag-type">Coupon</span></a>
+				      </h3>
+				</div>
+
+				<div class="contents-control">
+				            <dl>
+				            	<dt class ="icon-type view-icon">Viewed</dt>
+				            	<dd class ="view-val">450</dd>
+				            </dl>
+            
+				            <dl>
+				            	<dt class ="icon-type given-icon">Given </dt>
+				            	<dd class ="given-val">210</dd>	
+				            </dl>
+            
+			           </div>
+			</div>
+		     </li>
+
+		     <li class ="grid-2 contents-items" data-type ="coupon">
+			<div class="contents-main">
+				<div class ="contents-text">
+				      <a href="#" title ="Edit contents"  class ="edit-contents" data-icon="&#xf040;"></a>
+				       <h3>
+				      	<a href="#" class ="icon-type coupon-icon"><span class ="tag-type">Coupon</span></a>
+				      </h3>
+				</div>
+
+				<div class="contents-control">
+				            <dl>
+				            	<dt class ="icon-type view-icon">Viewed</dt>
+				            	<dd class ="view-val">450</dd>
+				            </dl>
+            
+				            <dl>
+				            	<dt class ="icon-type given-icon">Given </dt>
+				            	<dd class ="given-val">210</dd>	
+				            </dl>
+            
+			           </div>
 			</div>
 		     </li>
 		     

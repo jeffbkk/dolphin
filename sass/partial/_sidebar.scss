@@ -10,15 +10,17 @@
     text-align: center;
     overflow: hidden;
     top:0;
-    left:0;
-    left:-160px;
+    // left:0;
+    left:-160px;  
     z-index: 8000;
     width: 160px;
    
     #logo {
       width: 100%;
-      background: lighten($header, 3%);
-      height: 72px;
+      @include box-sizing( content-box );
+      border-bottom: 12px solid darken(#33545F, 3%);
+      background: #33545F;
+      height: 82px;
     }
 
     nav {  padding-top:  2em; }
@@ -51,7 +53,7 @@
                 &:hover span.nav-icon,
                 &.current span.nav-icon {
                      @include box-shadow( inset 0 2px 3px rgba(black, .25),0 1px 2px rgba(white, 1));
-                     background-color:  rgba(#1A687F,.35);}
+                     background-color:  #BDDAE4;}
 
 
                span.nav-label {
@@ -63,8 +65,6 @@
 
 }
 
-
-// .nav-label { display: none; }
 
 /*-------------------------------------------------
   //ICON OF THE NAV BAR

@@ -6,13 +6,9 @@
 
 .grid-3,
 .grid-4,
-.grid-5,
-.fill-parent,
 .grid-6,
 .grid-6-8,
-.grid-7,
 .grid-8,
-.grid-9,
 .grid-12 {
     width: 100%;
     [role="contentinfo"] &,
@@ -21,48 +17,55 @@
     }
 }
 
-@include media( $large-screen ) {
+@include media( $small-screen ) {
+     .grid-2 {
+         @include span-columns( 3 of 6 );
+         @include omega( 2n );}
+}
+
+@include media( $desktop-screen ) {
 
    .grid-2 {
-       @include span-columns( 2,12 );
-       @include omega( 6n );
-   }
+       @include span-columns( 3, 9 );
+       @include omega-reset(2n,9);
+       @include omega( 3n );}
 
    .grid-3 {
    	  @include omega( 4n );
-   	  @include span-columns( 3,12 );
-      [role="contentinfo"] & {
-      	  margin-bottom: 0;
-      }
-   	}
+   	  @include span-columns( 3,12 );}
 
    .grid-4 {
    	  margin-bottom: 0;
    	  @include span-columns( 4,12 );}
 
     .grid-5 {
-       @include span-columns( 5,12 );
-    }
+       @include span-columns( 5,12 );}
 
-   .grid-6 {
+    .grid-6 {
    	  @include span-columns( 6,12 );
    	  @include omega( 2n );}
 
   .grid-6-offset-3 {
         @include shift( 3 );
-        @include span-columns( 6,12 );
-  }
+        @include span-columns( 6,12 );}
 
-   .grid-8 {
-   	  @include span-columns( 8,12 );
-   	}
+}
 
-   .fill-parent {
-   		@include fill-parent;}
+@include media( $large-screen ){
 
-   .grid-9 {
-   	  @include span-columns( 9,11 );}
+  // .grid-2{
+  //       @include span-columns( 3,12 );
+  //       @include omega( 4n );
+  //       @include omega-reset(3n,12);
+  // }
 
+   .grid-2{
+        @include span-columns( 3,12 );
+        @include omega( 4n );
+        @include omega-reset(2n,12);
+    }
+
+      
 }
 
 
@@ -76,24 +79,23 @@
 section,
 [role="banner"],
 [role="contentinfo"] {
+        overflow: hidden;
 	  position: relative;
-	  // overflow: hidden;
+	  @include clearfix;
 	  width: 100%;}
 
 [role="banner"] {
 	  overflow: visible;}
 
-section,
-[role="contentinfo"] {
-	@include clearfix;
-	padding: 2.5em 0;
-}
 
 section {
+      padding: 2.5em 0;
 	@include clearfix;
       &.empty {
            text-align: center;
-           padding: 6em 0;
+           padding: 3em 0;}
+      &.title .container {
+          // border-bottom:1px solid lighten($light-gray, 4%);
       }
 }
 
@@ -105,6 +107,7 @@ section {
 	width: 100%;
 
       #main {
+        // margin-left: 160px;
         position: relative;
       }
 }
@@ -118,16 +121,16 @@ section {
 
 .container {
 	@include outer-container;
-	width: 96%;
-	margin:0 auto;
+	width: 88%;
 	max-width: 96%;
-	padding: 0 flex-gutter(  ) /2;}
+	padding: 0 0 1.5em ;
+      
+      @include media( $large-screen ){
+              width: 92%;
+      }
+        
+}
 
-/*---------------------------------------------------------
-
-// MAIN OBJECT BACKGROUND COLOR
-
------------------------------------------------------------*/
 
 
 

@@ -11,20 +11,29 @@
 
 [role="banner"] {
 	background: #33545F;
-	overflow: visible  !important;
+	@include box-sizing( content-box );
+	border-bottom:12px solid darken(#33545F, 3%);
+	@include transition ( height .25s ease );
+	overflow: hidden;
 	height: 72px;}
 
 #logo {
-	width: 250px;
-	height: 72px;
-	@include box-shadow( inset 0px  2px 2px rgba(black, .05) );
-	@include inline-block;}
+	@include size( 52px );
+	@include inline-block;
+	border-radius:50%;
+	border:3px solid white;
+            position: relative;
+            top:10px;
+            left:4%;
+            background: url(../img/logo.png) no-repeat center center; 
+            background-size: 42px auto;
+}
 
 #header-profile {
 	@extend .right;
+	clear:right;
 	position: relative;
 	padding: 0 4% 0 4%;
-	clear:left;
 	.avatar {
 	    position: relative;
                 
@@ -56,35 +65,39 @@
 }
 
 #user-settings {
-	position: absolute;
-	padding: 10px 20px;
-	top:94px;
-	@include transition ( all .27s ease-in-out );
-	margin-left: -55px;
-	border-radius:em(3);
-	opacity:0;
-	color:$medium-gray;
-	left:50%;
-	z-index: -400;
-	a {
-		color:$medium-gray;
-	}
-	&:before {
-	      position: absolute;
-	      top:-14px;
-	      content:'';
-	      display: block;
-	      margin-left: -7px;
-	      left:50%;
-                 @include triangle( 14px, white, up );
-	}
+	width: 100%;
+	top:72px;
+	height: 72px;
+	background: darken(#33545F, 3%);
+ //            ul {
+ //            	@include display-box;
+ //            	width: 100%;
+ //            	@include media( $medium-screen ) {
+	// 	display: block;}
+
+ //                        li {
+	// 	     font-size: em(14);
+	// 	     @include box-flex( 2 );
+	// 	     line-height: 72px;
+	// 	     border-left:1px solid lighten(#33545F, 8%);
+	// 	     text-align: center;
+	// 	     @include media( $medium-screen ){
+	// 	     	@include inline-block;
+	// 	     }
+	// 	     a {
+	// 	     	display: block;
+	// 	     	font-size: em(36);
+	// 	     	color: white;
+	// 	     	&:hover {
+	// 	     		color: white;}
+	// 	     	span {
+	// 	     		@include hide-text;
+	// 	     	}
+	// 	    }
+	//           }
+
+	// }
+
 }
 
-// #header-profile {
-// 	position: fixed;
-// 	top:0;
-// 	z-index: 10000;
-// 	right:0%;
-
-// }
 
