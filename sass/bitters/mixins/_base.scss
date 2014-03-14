@@ -8,3 +8,9 @@
 	 &:nth-child(#{$nth}+1) { clear:none; }
 
 }
+
+
+// @mixin omega-reset($nth, $num){
+//             &:nth-child(2n) { margin-right: flex-gutter($num);}
+//             &:nth-child(#{$nth}+1) {clear:none;}
+// }

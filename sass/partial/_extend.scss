@@ -8,17 +8,20 @@
 
 .row .btn {
 	display: block;
-	text-transform: uppercase;
 	text-align: center;
+	text-shadow: 0 1px 0 white;
+	color:darken(#548B9F, 8%);
 	width: 100%;
-	color:white;
+	@extend .has-shadow;
+	background: white;
+    @include background-image(linear-gradient( top, white, #F3F3F3));
+    border-radius:4px;
 	margin-top: .75em;
-            padding: .75em 11px;
-            background: #69ADC5;
-            font-weight: bold;
-            border-radius:3px;
-            &:hover  {
-            	background: darken(#69ADC5, 6%);}
+    padding: .55em 1em;
+    font-weight: bold;
+    &:hover  {
+    	color: darken(#548B9F, 20%);
+    	@include background-image(linear-gradient( top, white #EFEFEF));}
 
 	@include media( $tiny-screen ){
 		@include inline-block;

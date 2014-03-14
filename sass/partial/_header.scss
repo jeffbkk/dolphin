@@ -12,7 +12,7 @@
 [role="banner"] {
 	background: #33545F;
 	@include box-sizing( content-box );
-	border-bottom:12px solid darken(#33545F, 3%);
+	border-bottom:12px solid darken(#33545F, 3%); 
 	@include transition ( height .25s ease );
 	overflow: hidden;
 	height: 72px;
@@ -81,11 +81,22 @@
             	text-align: right;
             	display: block;
             	li {
-            		margin-right: 1em; 
+            		padding: 0 1em 0; 
+            		position: relative;
             		@include inline-block;
             		a {
             			@include inline-block;
-            			color:white;
+            			color: lighten(#33545F, 18%);
+            			&:hover { color: lighten(#33545F, 48%);}
+            		}
+
+            		&:first-child:before {
+            			content:"|";
+            			position: absolute;
+            			top:0;
+            			display: block;
+            			color: lighten(#33545F, 18%);
+            			right:0;
             		}
             	}
             }

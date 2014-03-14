@@ -20,7 +20,8 @@ $small-screen: new-breakpoint(min-width em(540) 6);
 $medium-screen: new-breakpoint(min-width em(760) 4);
 $desktop-screen: new-breakpoint(min-width em(920) 9);
 $large-screen: new-breakpoint(min-width em(1180) 12);
-$wide-screen: new-breakpoint(min-width em(1400) 12);
+// $wide-screen: new-breakpoint(min-width em(1400) 12);
+$wide-screen: new-breakpoint(min-width em(1400) 15);
 
 
 // MIXIN AlIAS

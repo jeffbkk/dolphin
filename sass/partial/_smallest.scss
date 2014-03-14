@@ -1,13 +1,6 @@
-* {
-	margin: 0;
-	padding: 0;
-	@include box-sizing( border-box );}
-
-	
 body {
 	background: $base-body-background;
             font: 100%/1.5 'Source Sans Pro', $helvetica;
-            // font: 100%/1.5 'Open Sans' , $helvetica;
             font-smooth: subpixel-antialiased;
             -ms-overflow-x: hidden;
             position: relative;
@@ -15,9 +8,6 @@ body {
             height: 100%;
             overflow-x: hidden;
             line-height: 1.5;}
-
-
- 
 
  #login-logo  {
  	height: 164px;
@@ -53,19 +43,14 @@ body {
 	margin: 0 auto 0;
 	padding: 0 0 1.5em;
 	max-width: 440px;
+    header{ 
+    	text-align: center; 
 
-	// em,a {
-	// 	display: block;}
-            
-            header{ 
-            	// padding: 1em 0;
-            	text-align: center; 
+    	h2 {
+    		letter-spacing: 0 !important;
+    	}
 
-            	h2 {
-            		letter-spacing: 0 !important;
-            	}
-
-            }
+    }
 }
 
 

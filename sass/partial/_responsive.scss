@@ -3,6 +3,11 @@
 /* Responsive Resets
 -------------------------------------------------------------- */
 
+* {
+	margin: 0;
+	padding: 0;
+	@include box-sizing( border-box );}
+
 @-o-viewport {
   width: device-width;
 }
