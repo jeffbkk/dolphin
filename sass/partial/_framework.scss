@@ -8,6 +8,7 @@
 .grid-4,
 .grid-6,
 .grid-6-8,
+.grid-6-offset-3,
 .grid-8,
 .grid-12 {
     width: 100%;
@@ -46,8 +47,8 @@
    	  @include omega( 2n );}
 
      .grid-6-offset-3 {
-        @include shift( 3 );
-        @include span-columns( 6,12 );}
+        @include span-columns( 5,9 );
+        @include shift( 2 );}
 
 }
 

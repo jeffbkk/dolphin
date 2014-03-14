@@ -326,20 +326,9 @@ a span {
   height: 144px;
   z-index: 4000; }
 
-#sidebar {
-  background: #e8e8eb; }
-
 .has-shadow, .row .btn, .contents-main {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.09);
   background: white; }
-
-a.aborded {
-  color: #76c3df;
-  font-weight: bold; }
-
-.nav-icon {
-  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(255, 255, 255, 0.85);
-  background: #dddde2; }
 
 [data-icon]:before {
   content: attr(data-icon);
@@ -388,6 +377,7 @@ a.aborded {
 .grid-4,
 .grid-6,
 .grid-6-8,
+.grid-6-offset-3,
 .grid-8,
 .grid-12 {
   width: 100%; }
@@ -398,6 +388,8 @@ a.aborded {
   .grid-6, [role="contentinfo"]
   .grid-6-8, #services
   .grid-6-8, [role="contentinfo"]
+  .grid-6-offset-3, #services
+  .grid-6-offset-3, [role="contentinfo"]
   .grid-8, #services
   .grid-8, [role="contentinfo"]
   .grid-12, #services
@@ -475,11 +467,11 @@ a.aborded {
       clear: left; }
 
   .grid-6-offset-3 {
-    margin-left: 34.28571%;
     display: block;
     float: left;
     margin-right: 2.85714%;
-    width: 65.71429%; }
+    width: 54.28571%;
+    margin-left: 22.85714%; }
     .grid-6-offset-3:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 73.75em) {
@@ -588,21 +580,13 @@ section {
 #sidebar {
   height: 100%;
   position: fixed;
-  box-shadow: inset 0 4px 4px #dadadf;
   text-align: center;
   overflow: hidden;
   top: 0;
-  left: -160px;
+  background: #4f5b5f;
+  left: -220px;
   z-index: 8000;
-  width: 160px; }
-  #sidebar #logo {
-    width: 100%;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    border-bottom: 12px solid #2e4b55;
-    background: #33545F;
-    height: 82px; }
+  width: 220px; }
   #sidebar nav {
     padding-top: 2em; }
   #sidebar nav li {
@@ -616,7 +600,8 @@ section {
       position: relative;
       vertical-align: middle;
       padding: 1.5em 0;
-      color: #b7b7c0; }
+      text-shadow: 0 -1px 0 #151819;
+      color: #a9b4b7; }
       #sidebar nav li a:hover, #sidebar nav li a.current {
         color: rgba(26, 104, 127, 0.65); }
       #sidebar nav li a:hover:before, #sidebar nav li a.current:before {
@@ -633,10 +618,7 @@ section {
         border-width: 15px;
         border-right-color: #ebeff1; }
       #sidebar nav li a:hover span.nav-icon, #sidebar nav li a.current span.nav-icon {
-        box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.25), 0 1px 2px white;
-        background-color: #BDDAE4; }
-      #sidebar nav li a span.nav-label {
-        text-shadow: 0 1px  0 white; }
+        opacity: 1; }
 
 /*-------------------------------------------------
   //ICON OF THE NAV BAR
@@ -644,9 +626,9 @@ section {
 .nav-icon {
   display: block;
   margin: 0 auto;
-  background: #dddde2;
+  opacity: .56;
+  background: #465054;
   border-radius: 50%;
-  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(255, 255, 255, 0.85);
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
@@ -762,7 +744,7 @@ section {
     font-size: 1.25em;
     color: white; }
   .edit-contents:hover i {
-    left: -15px;
+    left: -10px;
     opacity: 1; }
 
 .edit-contents i {
@@ -783,6 +765,7 @@ section {
     padding: .15em 0;
     background: #E3C3B1;
     color: white;
+    font-weight: bold;
     font-style: normal;
     width: 56px;
     border-radius: 2px;
@@ -816,11 +799,13 @@ section {
   display: none; }
 
 #contents-icon {
-  background: url(../img/icon/content-medium.svg) no-repeat center center;
-  border-radius: 50%;
+  border-radius: 16rem;
+  border-radius: 16px;
+  border-radius: 1em;
   opacity: .25;
+  position: relative;
   margin: 0 auto 1em;
-  border: .5em solid #9FBAC4;
+  border: .5em dashed #9FBAC4;
   width: 13.75em;
   height: 13.75em;
   background-size: 60% auto; }

@@ -55,7 +55,7 @@
 		         	color:white;}
 
 		         &:hover i {
-		         	left:-15px;
+		         	left:-10px;
 		         	opacity:1;
 		         }
            }
@@ -77,6 +77,7 @@
 		            padding: .15em 0;
 		            background: #E3C3B1;
 		            color:white;
+		            font-weight: bold;
 		            font-style: normal;
 		            width: 56px;
 		            border-radius:2px;
@@ -109,11 +110,13 @@
 	display:none;}
 
  #contents-icon {
- 	background: url(../img/icon/content-medium.svg) no-repeat center center;
- 	border-radius:50%;
+ 	border-radius:16rem;
+ 	border-radius:16px;
+ 	border-radius:1em;
  	opacity:.25;
+ 	position: relative;
  	margin:0 auto 1em;
- 	border:.5em solid #9FBAC4;
+ 	border:.5em dashed #9FBAC4;
  	@include size( 13.75em );
  	background-size: 60% auto;
  }

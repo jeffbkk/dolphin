@@ -2,28 +2,21 @@
 // SIDEBAR
 ---------------------------------------------------*/
 
+$sidebar-bg:#4F5B5F;
+
 #sidebar {
     height: 100%;
     position: fixed;
-    // border-right:3px solid darken($sidebar, 4%);
-    @include box-shadow(  inset 0 4px 4px darken($sidebar, 5%));
     text-align: center;
     overflow: hidden;
     top:0;
+    background: $sidebar-bg;
     // left:0;
-    left:-160px;  
+    left:-220px;
     z-index: 8000;
-    width: 160px;
-   
-    #logo {
-      width: 100%;
-      @include box-sizing( content-box );
-      border-bottom: 12px solid darken(#33545F, 3%);
-      background: #33545F;
-      height: 82px;
-    }
-
-    nav {  padding-top:  2em; }
+    width: 220px;
+    nav {  
+        padding-top:  2em; }
 
     nav  li { position: relative;
            a {
@@ -33,7 +26,8 @@
                position: relative;
                vertical-align: middle;
                padding:1.5em 0;
-               color: $text-gray;
+               text-shadow: 0 -1px 0 darken($sidebar-bg, 25%);
+               color: lighten($sidebar-bg, 35%);
 
                 &:hover,
                 &.current {
@@ -52,13 +46,7 @@
     
                 &:hover span.nav-icon,
                 &.current span.nav-icon {
-                     @include box-shadow( inset 0 2px 3px rgba(black, .25),0 1px 2px rgba(white, 1));
-                     background-color:  #BDDAE4;}
-
-
-               span.nav-label {
-                     text-shadow: 0 1px  0 white;
-               }
+                     opacity:1; }
 
             }
     }
@@ -73,9 +61,9 @@
 .nav-icon {
      display: block;
      margin:0 auto;
-     background: darken($sidebar, 4%);
+     opacity:.56;
+     background: darken($sidebar-bg, 4%);
      border-radius:50%;
-     @include box-shadow( inset 0 2px 3px rgba(black, .1), 0 1px 2px rgba(white, .85) );
      @include transition ( all .15s ease-in-out );
      background-size: 65% auto;
      background-position: center center;
