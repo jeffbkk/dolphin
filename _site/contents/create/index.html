@@ -5,7 +5,7 @@
 <!-- Always force latest IE rendering engine or request Chrome Frame -->
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
-<title>Create Content</title>
+<title>Contents</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -144,7 +144,7 @@
   <section class="title">
     <div class="container">
         <div class="row">
-            <h1>Create Content</h1>
+            <h1>Contents</h1>
         </div>
     </div>
 </section>
@@ -153,17 +153,18 @@
 
     <div class="container">
 
-    <div class="grid-10 form-container">
+    <div class="grid-5">
+
+     <h2>Create content</h2>
     
     <form action="/" mehtod ="post">
-        
-        <h2>New content</h2>
-        
+       
+        <fieldset>
         <ul>
-            
             <li>
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title" required placeholder="Title">
+                <p class="field-help">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio.</p>
             </li>
 
             <!-- <li>
@@ -195,12 +196,16 @@
             <li>
                 <label for="description">Description</label>
                 <textarea id="description" name="description" id="description"></textarea>
+                 <p class="field-help">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio.</p>
             </li>
 
-                        <li>
-                                   <label for="notification-message">Notification Message</label>
-                                   <textarea name="notification-message" id="notification-message"></textarea>
-                        </li>
+            <li>
+                <label for="notification-message">Notification Message</label>
+                <textarea name="notification-message" id="notification-message"></textarea>
+                <p class="field-help">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio.</p>
+            </li>
+
+            </fieldset>
     
         </ul>
 
@@ -286,6 +291,9 @@
 
         </div> <!-- end main  -->
      </div><!-- End wrapper -->
+
+     
+
        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <script src="/javascript/app.js"></script>
   <script src="/javascript/helper.js"></script>

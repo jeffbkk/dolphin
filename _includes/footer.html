@@ -1,5 +1,12 @@
         </div> <!-- end main  -->
      </div><!-- End wrapper -->
+
+     {% if page.url == "/contents/index.html" %}
+         
+         {% include modal.html %}
+
+     {% endif %}
+
      {% include script.html  %}
   </body>
 </html>

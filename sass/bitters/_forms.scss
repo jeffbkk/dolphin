@@ -1,5 +1,5 @@
 $form-border-color: $base-border-color;
-$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-hover: lighten(#548B9F, 10%) ;
 $form-border-color-focus: $base-accent-color;
 $form-border-radius: $base-border-radius;
 $form-box-shadow: 0 0 0 1px rgba( #fff, .45) ;
@@ -9,14 +9,10 @@ $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
 
 form {
-  margin-top: 1em;
-}
-
-// .tsh {
-//   text-shadow: 0 -1px  0 rgba(black, .35);}
+  margin-top: 1em;}
 
 fieldset {
-  background: lighten($base-border-color, 10);
+  background: lighten($base-border-color, 50);
   border: 1px solid $base-border-color;
   border:0;
   margin: 0 0 ($base-line-height / 2) 0;
@@ -33,8 +29,9 @@ select {
 }
 
 label {
-  font-weight: bold;
-  font-size: em(14);
+  // font-weight: bold;
+  // font-size: em(14);
+  color: #33545F;
   margin-bottom: $base-line-height / 3;
 
   &.required:after {
@@ -53,26 +50,22 @@ form li {
 
 textarea,
 #{$all-text-inputs} {
-  background-color: white;
+  position: relative;
+  background: darken(#EBEFF1, 5%);
   border-radius:$form-border-radius/2;
-  @include transition ( all .25s ease );
-  border:1px solid $form-border-color;
+  @include transition ( border .75s ease );
+  border:2px solid transparent;
   font-family: $form-font-family;
-  box-shadow: $form-box-shadow;
   font-size: $form-font-size;
   margin-bottom: $base-line-height / 2;
   padding: ($base-line-height / 1.75) ($base-line-height / 3);
   // resize: vertical;
   width: 100%;
 
-  &:hover {
-    border-color: $form-border-color-hover;
-  }
 
   &:focus {
-    border-color: $form-border-color-hover;
+    border-bottom-color: $form-border-color-hover;
     @include placeholder { opacity:0; visibility: hidden; };
-    // box-shadow: $form-box-shadow-focus;
     outline: none;
   }
 }
@@ -101,7 +94,41 @@ select {
       display: none;}
 }
 
-button,
+
+button {
+  border:0;
+  font-size: em(14);
+  outline:0;
+  @include transition ( all .15s ease );
+  display: block;
+   border-radius:em(3);
+  cursor:pointer;
+  padding: 1em 2.5em;
+  color: #548B9F;
+  background: none;
+  @include appearance( none );
+
+  &.delete-contents {
+    color:white;
+    background: $delete;
+    &:hover {
+      background:$delete-hover;}
+  }
+
+  &.update-contents {
+    color:white;
+    background: #5B96AC;
+    &:hover {
+        background: darken( #5B96AC, 6%);}
+  }
+
+  &.cancel-action {
+    background: #F5F9FB;}
+
+
+} 
+
+
 input[type="submit"] {
   border:0;
   display: block;
@@ -123,4 +150,13 @@ input[type="submit"] {
     display: none;
 }
 
+
+p.field-help {
+   opacity:0;
+   display: block;
+   color:#548B9F;
+   max-height: 0;
+   font-weight: bold;
+   font-size: em(14);
+}
 

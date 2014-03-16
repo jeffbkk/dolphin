@@ -7,10 +7,6 @@ a span {
 	@include transition ( all .25s ease-in-out );
 }
 
-
-
-
-
 #sidebar.open {
 
 }
@@ -30,6 +26,22 @@ a span {
 	opacity:1;
 	height: 144px;
 	z-index: 4000;}
+
+@include keyframes( welcome ) {
+	0% {opacity:0; @include transform(scale( .4 ));} 
+	50% {opacity:0; @include transform(scale( .4 ));} 
+	82% {opacity:1; @include transform(scale( 1.08 ));} 
+	100% {@include transform(scale( 1 ));}}
+
+
+@include keyframes( fadeDown ) {
+	0% { opacity:0; @include transform(translateY( -20px ));}
+        100% { opacity:1; @include transform(translateY( 0 ));}}
+
+@include keyframes( fadeUp ) {
+	0% { opacity:0; @include transform(translateY( 20px ));}
+        100% { opacity:1; @include transform(translateY( 0 ));}}
+
 
 
 

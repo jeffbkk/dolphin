@@ -74,12 +74,22 @@
 
 
 @include media( $wide-screen ){
+
    .grid-2{
         @include span-columns( 3,15 );
         @include omega-reset(2n,15);
         @include omega-reset(3n,15);
         @include omega-reset(4n,15);
         @include omega( 5n );
+    }
+
+    .grid-5 {
+        @include span-columns( 5,15 );
+    }
+
+    .grid-5-offset5 {
+        @include shift( 5 );
+        @include span-columns( 5,15 );
     }
       
 }

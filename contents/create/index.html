@@ -1,5 +1,5 @@
 ---
-title: Create Content
+title: Contents
 layout: default
 ---
 
@@ -15,17 +15,18 @@ layout: default
 
     <div class="container">
 
-    <div class="grid-10 form-container">
+    <div class="grid-5">
+
+     <h2>Create content</h2>
     
     <form action="/" mehtod ="post">
-        
-        <h2>New content</h2>
-        
+       
+        <fieldset>
         <ul>
-            
             <li>
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title" required placeholder="Title">
+                <p class="field-help">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio.</p>
             </li>
 
             <!-- <li>
@@ -57,12 +58,16 @@ layout: default
             <li>
                 <label for="description">Description</label>
                 <textarea id="description" name="description" id="description"></textarea>
+                 <p class="field-help">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio.</p>
             </li>
 
-                        <li>
-                                   <label for="notification-message">Notification Message</label>
-                                   <textarea name="notification-message" id="notification-message"></textarea>
-                        </li>
+            <li>
+                <label for="notification-message">Notification Message</label>
+                <textarea name="notification-message" id="notification-message"></textarea>
+                <p class="field-help">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio.</p>
+            </li>
+
+            </fieldset>
     
         </ul>
 

@@ -119,6 +119,30 @@
  	border:.5em dashed #9FBAC4;
  	@include size( 13.75em );
  	background-size: 60% auto;
+
+ 	&:before,
+ 	&:after {
+ 		content:'';
+ 		top:50%;
+ 		position: absolute;
+ 		left:50%;
+ 		width: 2em;
+ 		height: .5em;
+ 		display: block;
+ 		background:#9FBAC4;}
+
+ 	&:before {
+ 		margin-top:-.25em;
+ 		// display: none;
+ 		z-index: 4;
+ 		margin-left: -1em;}
+
+ 	&:after {
+ 		margin-top:-.25em;
+ 		transform-origin: center center;
+ 		margin-left: -1em;
+ 		@include transform( rotate(90deg));
+ 	}
  }
 /*-----------------------------------------------------------------------------------------------
  
