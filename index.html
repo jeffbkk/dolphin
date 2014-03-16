@@ -19,12 +19,13 @@ layout: login
     	
          <div id="login-form-container">
 
-               <header>
-                   <!-- <h2>Welcome</h2> -->
+               
+    	  
+    	    <form action="/" method ="post" class ="login active">
+
+    	        <header>
                    <h2>Sign in</h2>
                </header>
-    	  
-    	    <form action="/" method ="post">
 		    
 		        <ul>
 		         <fieldset class ="form-container">
@@ -40,19 +41,43 @@ layout: login
 		          </fieldset>
         
 		        	<li>
-		        		<input type="submit" id="login-submit" value="Log in"> <!-- or <a href="#" class ="aborded"> Recover my Password</a> -->
+		        		<input type="submit" id="login-submit" value="Log in">
 		        	</li>
 		        </ul>
+
+		        <div id="forgot">
+                   <p><a href="#" data-link="login" >Forget password ?</a></p>
+		        </div>
 	          </form>
 
+	          <!-- <form action="/" method ="post" class ="forgot-password">
 
-	          <div id="forgot">
-	          	<p><a href="#">Forgot your password?</a></p>
-	          </div>
+	              <header>
+                      <h2>Reset Password</h2>
+                  </header>
 
+	          	  <ul>
+	          	  	<fieldset class ="form-container">
+	          	  		<li>
+	          	  			<label for="password-recovery">Email or Username</label>
+	          	  			<input type="text" name="password-recovery" autofocus id="password-recovery" required placeholder ='Email or Username'>
+	          	  		</li>
+	          	  	</fieldset>
+
+	          	  	    <li>
+	          	  	    	<input type="submit" value="Send Password" id="forgot-submit">
+	          	  	    </li>
+	          	  </ul>
+
+	          	  <div id="back-to-login">
+	          	  	<p><a href="#" data-link="forgot-password">Back to Login</a></p>
+	          	  </div>
+	          </form> -->
         </div>
 
     </div>
+
+    
 	
 </section>
 

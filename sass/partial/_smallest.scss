@@ -15,8 +15,8 @@ body {
  	@include transition ( all .45s ease );
  	// background: #33545F;
             
-             @include media( $medium-screen ){
-           	      height: 284px; }
+             // @include media( $medium-screen ){
+           	 //      height: 284px; }
  }
 
  #login-form {
@@ -29,10 +29,12 @@ body {
         margin: 0 auto;
     }
 
-    #forgot, header {
+    #forgot, #back-to-login, header {
         text-align: center;
+        margin-bottom: .75em;
 
-        &#forgot {
+        &#forgot,
+        &#back-to-login {
             margin-top: 4em;
         }
     }   
@@ -40,20 +42,18 @@ body {
  }
 
  #login-dolphin-logo {
- 	// @include transition ( all .45s ease );
-    background: #33545F url(../img/logo.png) no-repeat center center;
-    background-size: 164px auto;
+    @include transition ( background  width height .2s ease-in-out );
+    background: darken(#3F7C92, 10%) url(../img/logo-s.png) no-repeat;
+    background-position: center center;
+    @include image-2x("../img/logo-s2x.png",248px, 248px);
  	margin:0 auto;
-    @include size( em(164) );
-    // height: 164px;
+    @include size( em(124) );
     border-radius:50%;
- 	// max-width: 164px;
 
            @include media( $medium-screen ){
-                  background-size: 224px auto;
-                  @include size( em(224) );}
-                  // height: 284px;
-           	      // max-width: 284px; }
+                  background: darken(#3F7C92, 10%) url(../img/logo-b.png) no-repeat; 
+                  @include image-2x("../img/logo-b2x.png",368px, 368px);
+                  @include size( em(184) );}
  }
 
 .form-container {

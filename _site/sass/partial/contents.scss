@@ -18,7 +18,7 @@
 	}
 
 	&:hover .edit-contents:before {
-        color: #E3C3B1;}
+        color: #F7617D;}
 
 	&:nth-child(3n+3),
 	&:nth-child(5n+1) {
@@ -43,6 +43,7 @@
            .edit-contents {
            	      position: absolute;
 		          top:em(10);
+		          text-shadow: none !important;
 		          @include transition ( all .25s ease-in-out );
 		          border-radius:em(3);
 		          display: block;
@@ -75,7 +76,7 @@
            	     &:before  {
            	        content:attr(data-title);
 		            padding: .15em 0;
-		            background: #E3C3B1;
+		            background: #F7617D;
 		            color:white;
 		            font-weight: bold;
 		            font-style: normal;
@@ -87,7 +88,7 @@
 		            &:after {
 		              right:-16px;
 		              top:4px;
-		          	  @include triangle( 20px, #E3C3B1, right );}
+		          	  @include triangle( 20px, #F7617D, right );}
 		     }
 		       
 	

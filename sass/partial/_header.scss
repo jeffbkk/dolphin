@@ -10,12 +10,13 @@
 
 
 [role="banner"] {
-	background: #33545F;
+	background: darken(#3F7C92, 10%);
 	@include box-sizing( content-box );
-	border-bottom:12px solid darken(#33545F, 3%); 
+	border-bottom:12px solid darken(#3F7C92, 12%); 
 	@include transition ( height .25s ease );
 	overflow: hidden;
 	height: 72px;
+	        a { text-shadow: none !important;}
             .container { width: 100% !important; max-width: none !important; }
 }
 
@@ -71,7 +72,7 @@
 	top:72px;
 	position: relative;
 	height: 72px;
-	background: darken(#33545F, 3%);
+	background: darken(#3F7C92, 12%);
             
             ul {
             	line-height: 82px;

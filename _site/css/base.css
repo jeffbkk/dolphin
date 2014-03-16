@@ -61,15 +61,16 @@ p {
   margin: 0 0 0.75em; }
 
 a {
-  color: #477dca;
+  color: #548b9f;
   text-decoration: none;
+  text-shadow: 0 1px 0 white;
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
   transition: color 0.1s linear; }
   a:hover {
-    color: #2c5999; }
+    color: #3a5f6d; }
   a:active, a:focus {
-    color: #2c5999;
+    color: #3a5f6d;
     outline: none; }
 
 hr {
@@ -871,7 +872,7 @@ section {
     top: -.55em; }
   .contents-items:hover .edit-contents:before,
   .fadeinUp:hover .edit-contents:before {
-    color: #E3C3B1; }
+    color: #F7617D; }
   .contents-items:nth-child(3n+3), .contents-items:nth-child(5n+1),
   .fadeinUp:nth-child(3n+3),
   .fadeinUp:nth-child(5n+1) {
@@ -922,6 +923,7 @@ section {
 .edit-contents {
   position: absolute;
   top: 0.625em;
+  text-shadow: none !important;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
@@ -957,7 +959,7 @@ section {
   .edit-contents i:before {
     content: attr(data-title);
     padding: .15em 0;
-    background: #E3C3B1;
+    background: #F7617D;
     color: white;
     font-weight: bold;
     font-style: normal;
@@ -973,7 +975,7 @@ section {
     border-color: transparent;
     border-style: solid;
     border-width: 10px;
-    border-left-color: #e3c3b1; }
+    border-left-color: #f7617d; }
 
 .contents-text,
 .contents-control {
@@ -1169,16 +1171,18 @@ section {
   height: 52px; }
 
 [role="banner"] {
-  background: #33545F;
+  background: #305e6e;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  border-bottom: 12px solid #2e4b55;
+  border-bottom: 12px solid #2d5867;
   -webkit-transition: height 0.25s ease;
   -moz-transition: height 0.25s ease;
   transition: height 0.25s ease;
   overflow: hidden;
   height: 72px; }
+  [role="banner"] a {
+    text-shadow: none !important; }
   [role="banner"] .container {
     width: 100% !important;
     max-width: none !important; }
@@ -1239,7 +1243,7 @@ section {
   top: 72px;
   position: relative;
   height: 72px;
-  background: #2e4b55; }
+  background: #2d5867; }
   #user-settings ul {
     line-height: 82px;
     width: 400px;
@@ -1336,9 +1340,6 @@ body {
   -webkit-transition: all 0.45s ease;
   -moz-transition: all 0.45s ease;
   transition: all 0.45s ease; }
-  @media screen and (min-width: 47.5em) {
-    #login-logo {
-      height: 284px; } }
 
 #login-form {
   height: 55%; }
@@ -1351,23 +1352,37 @@ body {
     animation: fadeDown 0.45s ease-in;
     max-width: 440px;
     margin: 0 auto; }
-  #login-form #forgot, #login-form header {
-    text-align: center; }
-    #login-form #forgot#forgot, #login-form header#forgot {
+  #login-form #forgot, #login-form #back-to-login, #login-form header {
+    text-align: center;
+    margin-bottom: .75em; }
+    #login-form #forgot#forgot, #login-form #forgot#back-to-login, #login-form #back-to-login#forgot, #login-form #back-to-login#back-to-login, #login-form header#forgot, #login-form header#back-to-login {
       margin-top: 4em; }
 
 #login-dolphin-logo {
-  background: #33545f url(../img/logo.png) no-repeat center center;
-  background-size: 164px auto;
+  -webkit-transition: background width height 0.2s ease-in-out;
+  -moz-transition: background width height 0.2s ease-in-out;
+  transition: background width height 0.2s ease-in-out;
+  background: #305e6e url(../img/logo-s.png) no-repeat;
+  background-position: center center;
   margin: 0 auto;
-  width: 10.25em;
-  height: 10.25em;
+  width: 7.75em;
+  height: 7.75em;
   border-radius: 50%; }
+  @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+    #login-dolphin-logo {
+      /* on retina, use image that's scaled by 2 */
+      background-image: url("../img/logo-s2x.png");
+      background-size: 248px 248px; } }
   @media screen and (min-width: 47.5em) {
     #login-dolphin-logo {
-      background-size: 224px auto;
-      width: 14em;
-      height: 14em; } }
+      background: #305e6e url(../img/logo-b.png) no-repeat;
+      width: 11.5em;
+      height: 11.5em; } }
+    @media screen and (min-width: 47.5em) and (min--moz-device-pixel-ratio: 1.3), screen and (min-width: 47.5em) and (-o-min-device-pixel-ratio: 2.6 / 2), screen and (min-width: 47.5em) and (-webkit-min-device-pixel-ratio: 1.3), screen and (min-width: 47.5em) and (min-device-pixel-ratio: 1.3), screen and (min-width: 47.5em) and (min-resolution: 1.3dppx) {
+      #login-dolphin-logo {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url("../img/logo-b2x.png");
+        background-size: 368px 368px; } }
 
 .form-container {
   position: relative;
