@@ -10,39 +10,56 @@ body {
             line-height: 1.5;}
 
  #login-logo  {
- 	height: 164px;
- 	padding-top: 0;
+ 	// height: 164px;
+ 	padding-bottom: 0;
  	@include transition ( all .45s ease );
- 	background: #33545F;
+ 	// background: #33545F;
             
              @include media( $medium-screen ){
            	      height: 284px; }
-           
  }
 
  #login-form {
- 	height: 55%;}
+ 	height: 55%;
+    
+    #login-form-container {
+        @include animation( welcome .55s ease-in );
+        @include animation( fadeDown .45s  ease-in );
+        max-width: 440px;
+        margin: 0 auto;
+    }
+
+    #forgot, header {
+        text-align: center;
+
+        &#forgot {
+            margin-top: 4em;
+        }
+    }   
+
+ }
 
  #login-dolphin-logo {
- 	@include transition ( all .45s ease );
+ 	// @include transition ( all .45s ease );
+    background: #33545F url(../img/logo.png) no-repeat center center;
+    background-size: 164px auto;
  	margin:0 auto;
- 	@include animation( fadeUp .45s  ease-in );
- 	padding: 0 0 1.5em;
- 	max-width: 164px;
+    @include size( em(164) );
+    // height: 164px;
+    border-radius:50%;
+ 	// max-width: 164px;
 
            @include media( $medium-screen ){
-           	      max-width: 284px; }
+                  background-size: 224px auto;
+                  @include size( em(224) );}
+                  // height: 284px;
+           	      // max-width: 284px; }
  }
 
 .form-container {
-	@include animation( welcome .55s ease-in );
-	@include animation( fadeDown .45s  ease-in );
 	position: relative;
 	text-align: left;
-	// opacity:0;
-	margin: 0 auto 0;
-	padding: 0 0 1.5em;
-	max-width: 440px;
+	padding: 1.5em;
     header{ 
     	text-align: center; 
 

@@ -1,4 +1,4 @@
-$form-border-color: $base-border-color;
+$form-border-color: lighten(#548B9F, 44%);
 $form-border-color-hover: lighten(#548B9F, 10%) ;
 $form-border-color-focus: $base-accent-color;
 $form-border-radius: $base-border-radius;
@@ -52,9 +52,11 @@ textarea,
 #{$all-text-inputs} {
   position: relative;
   background: darken(#EBEFF1, 5%);
-  border-radius:$form-border-radius/2;
+  background: transparent;
+  // border-radius:$form-border-radius/2;
+  border:0;
+  border-bottom:1px solid $form-border-color;
   @include transition ( border .75s ease );
-  border:2px solid transparent;
   font-family: $form-font-family;
   font-size: $form-font-size;
   margin-bottom: $base-line-height / 2;
@@ -84,8 +86,7 @@ input[type="file"] {
 
 textarea {
   min-height: 7em;
-  height: 7em;
-}
+  height: 7em;}
 
 select {
   width: auto;
@@ -134,16 +135,18 @@ input[type="submit"] {
   display: block;
   width: 100%;
   margin: 1.5em 0  .75em;
-  @include transition ( background .3s ease );
+  @include transition ( all .3s ease );
   cursor: pointer;
   user-select: none;
-  background: #BDDAE4;
+  background: #548B9F;
+  @include background-image(linear-gradient( top, #548B9F, darken(#548B9F, 5%) ));
+  @include box-shadow( 0 1px 1px darken(#548B9F, 40%) );
   font-weight: bold;
   color:white;
   padding: 1em 3.75em;
   border-radius:3px;
   &:hover {
-       background: darken(#BDDAE4, 14%);}
+      @include background-image(linear-gradient( top, darken(#548B9F, 5%), darken(#548B9F, 15%) ));}
 }
 
 .content-type {

@@ -6,11 +6,7 @@ layout: login
 <section id="login-logo" class ="half">
 
    <div class="container">
-   	  <div id="login-dolphin-logo">
-		<a href="#">
-			<img src="img/logo.png" alt="logo">
-		</a>
-	</div>
+   	  <div id="login-dolphin-logo"></div>
    </div>
 	
 </section>
@@ -21,16 +17,17 @@ layout: login
 
     <div class="container">
     	
-         <div id="login-form-container" class ="form-container">
+         <div id="login-form-container">
 
                <header>
-               	<h2>Welcome</h2>
-               	<h3>Please log in</h3>
+                   <!-- <h2>Welcome</h2> -->
+                   <h2>Sign in</h2>
                </header>
     	  
     	    <form action="/" method ="post">
 		    
 		        <ul>
+		         <fieldset class ="form-container">
 		        	<li>
 		        		<label for="email">Email</label>
 		        		<input type="email" name="email" id="email" required placeholder="Email" autofocus>
@@ -40,12 +37,18 @@ layout: login
 		        		<label for="password">Password</label>
 		        		<input type="password" name="password" id="password" required placeholder ="Password">
 		        	</li>
+		          </fieldset>
         
 		        	<li>
 		        		<input type="submit" id="login-submit" value="Log in"> <!-- or <a href="#" class ="aborded"> Recover my Password</a> -->
 		        	</li>
 		        </ul>
-	   </form>
+	          </form>
+
+
+	          <div id="forgot">
+	          	<p><a href="#">Forgot your password?</a></p>
+	          </div>
 
         </div>
 

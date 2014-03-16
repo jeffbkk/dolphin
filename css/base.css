@@ -143,11 +143,12 @@ textarea,
 input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="url"], input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="time"], input[type="week"] {
   position: relative;
   background: #dce3e7;
-  border-radius: 0.09375em;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #e3edf0;
   -webkit-transition: border 0.75s ease;
   -moz-transition: border 0.75s ease;
   transition: border 0.75s ease;
-  border: 2px solid transparent;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
   margin-bottom: 0.75em;
@@ -234,18 +235,22 @@ input[type="submit"] {
   display: block;
   width: 100%;
   margin: 1.5em 0  .75em;
-  -webkit-transition: background 0.3s ease;
-  -moz-transition: background 0.3s ease;
-  transition: background 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
   user-select: none;
-  background: #BDDAE4;
+  background: #548B9F;
+  background-image: -webkit-linear-gradient(top, #548b9f, #4b7c8e);
+  background-image: linear-gradient(to bottom, #548b9f, #4b7c8e);
+  box-shadow: 0 1px 1px #0d161a;
   font-weight: bold;
   color: white;
   padding: 1em 3.75em;
   border-radius: 3px; }
   input[type="submit"]:hover {
-    background: #8abecf; }
+    background-image: -webkit-linear-gradient(top, #4b7c8e, #3a5f6d);
+    background-image: linear-gradient(to bottom, #4b7c8e, #3a5f6d); }
 
 .content-type {
   display: none; }
@@ -495,9 +500,12 @@ a span {
     opacity: 1;
     transform: translateY(0); } }
 
-.has-shadow, .row .btn, .contents-main {
+.has-shadow, .form-container, .row .btn, .contents-main {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.09);
   background: white; }
+
+.form-container {
+  padding: 1.5em; }
 
 [data-icon]:before {
   content: attr(data-icon);
@@ -1324,45 +1332,47 @@ body {
   line-height: 1.5; }
 
 #login-logo {
-  height: 164px;
-  padding-top: 0;
+  padding-bottom: 0;
   -webkit-transition: all 0.45s ease;
   -moz-transition: all 0.45s ease;
-  transition: all 0.45s ease;
-  background: #33545F; }
+  transition: all 0.45s ease; }
   @media screen and (min-width: 47.5em) {
     #login-logo {
       height: 284px; } }
 
 #login-form {
   height: 55%; }
+  #login-form #login-form-container {
+    -webkit-animation: welcome 0.55s ease-in;
+    -moz-animation: welcome 0.55s ease-in;
+    animation: welcome 0.55s ease-in;
+    -webkit-animation: fadeDown 0.45s ease-in;
+    -moz-animation: fadeDown 0.45s ease-in;
+    animation: fadeDown 0.45s ease-in;
+    max-width: 440px;
+    margin: 0 auto; }
+  #login-form #forgot, #login-form header {
+    text-align: center; }
+    #login-form #forgot#forgot, #login-form header#forgot {
+      margin-top: 4em; }
 
 #login-dolphin-logo {
-  -webkit-transition: all 0.45s ease;
-  -moz-transition: all 0.45s ease;
-  transition: all 0.45s ease;
+  background: #33545f url(../img/logo.png) no-repeat center center;
+  background-size: 164px auto;
   margin: 0 auto;
-  -webkit-animation: fadeUp 0.45s ease-in;
-  -moz-animation: fadeUp 0.45s ease-in;
-  animation: fadeUp 0.45s ease-in;
-  padding: 0 0 1.5em;
-  max-width: 164px; }
+  width: 10.25em;
+  height: 10.25em;
+  border-radius: 50%; }
   @media screen and (min-width: 47.5em) {
     #login-dolphin-logo {
-      max-width: 284px; } }
+      background-size: 224px auto;
+      width: 14em;
+      height: 14em; } }
 
 .form-container {
-  -webkit-animation: welcome 0.55s ease-in;
-  -moz-animation: welcome 0.55s ease-in;
-  animation: welcome 0.55s ease-in;
-  -webkit-animation: fadeDown 0.45s ease-in;
-  -moz-animation: fadeDown 0.45s ease-in;
-  animation: fadeDown 0.45s ease-in;
   position: relative;
   text-align: left;
-  margin: 0 auto 0;
-  padding: 0 0 1.5em;
-  max-width: 440px; }
+  padding: 1.5em; }
   .form-container header {
     text-align: center; }
     .form-container header h2 {
