@@ -2,7 +2,36 @@
 	box-shadow: 0 1px 2px rgba(black, .09);
 	background: white;}
 
-.form-container {
+.input-wrapper {
 	padding: 1.5em;
 	@extend .has-shadow;
+}
+
+.offset {
+	@include animation( offset .15s  ease-in forwards );}
+
+.in {
+	opacity:0;
+	@include transform( translateX(-30px) );}
+
+.visible {
+	opacity:1;}
+
+.hidden {
+	@include transform( translateX(-30px) );
+	position: absolute;}
+
+.slideIn {
+	opacity:0;
+	@include animation( slideIn .15s ease-in forwards );}
+
+
+@include keyframes(offset ) {
+   0% { opacity:1; @include transform( translateX(0px) );}
+   100% { opacity:0; @include transform( translateX(-30px) );}}
+
+
+@include keyframes( slideIn) {
+   0% { opacity:0; @include transform( translateX(-30px) );}
+   100% { opacity:1; @include transform( translateX(0px) );}
 }

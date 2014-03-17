@@ -6,17 +6,30 @@ table {
 }
 
 th {
-  border-bottom: 1px solid darken($base-border-color, 15%);
+  border-bottom: 1px solid #BDDAE4;
   font-weight: bold;
   padding: ($base-line-height / 2) 0;
   text-align: left;
 }
 
 td {
-  border-bottom: 1px solid $base-border-color;
+  border-bottom: 1px solid white;
   padding: ($base-line-height / 2) 0;
 }
 
 tr, td, th {
   vertical-align: middle;
+}
+
+thead tr,
+tbody td.customer-name {
+  font-weight: bold;
+}
+
+
+tbody figure {
+     @include size( 62px ); 
+     border-radius:em(2);
+     padding: em(4);
+     @extend .has-shadow;
 }

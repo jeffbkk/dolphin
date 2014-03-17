@@ -128,7 +128,9 @@ select {
   font-size: 1em; }
 
 label {
+  font-weight: bold;
   color: #33545F;
+  color: #5B96AC;
   margin-bottom: 0.5em; }
   label.required:after {
     content: "*"; }
@@ -271,17 +273,27 @@ table {
   width: 100%; }
 
 th {
-  border-bottom: 1px solid rgba(44, 51, 53, 0.2);
+  border-bottom: 1px solid #BDDAE4;
   font-weight: bold;
   padding: 0.75em 0;
   text-align: left; }
 
 td {
-  border-bottom: 1px solid rgba(79, 91, 95, 0.2);
+  border-bottom: 1px solid white;
   padding: 0.75em 0; }
 
 tr, td, th {
   vertical-align: middle; }
+
+thead tr,
+tbody td.customer-name {
+  font-weight: bold; }
+
+tbody figure {
+  width: 62px;
+  height: 62px;
+  border-radius: 0.125em;
+  padding: 0.25em; }
 
 ul, ol {
   margin: 0;
@@ -501,12 +513,114 @@ a span {
     opacity: 1;
     transform: translateY(0); } }
 
-.has-shadow, .form-container, .row .btn, .contents-main {
+.has-shadow, tbody figure, .input-wrapper, .row .btn, .contents-main {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.09);
   background: white; }
 
-.form-container {
+.input-wrapper {
   padding: 1.5em; }
+
+.offset {
+  -webkit-animation: offset 0.15s ease-in forwards;
+  -moz-animation: offset 0.15s ease-in forwards;
+  animation: offset 0.15s ease-in forwards; }
+
+.in {
+  opacity: 0;
+  -webkit-transform: translateX(-30px);
+  -moz-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  -o-transform: translateX(-30px);
+  transform: translateX(-30px); }
+
+.visible {
+  opacity: 1; }
+
+.hidden {
+  -webkit-transform: translateX(-30px);
+  -moz-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  -o-transform: translateX(-30px);
+  transform: translateX(-30px);
+  position: absolute; }
+
+.slideIn {
+  opacity: 0;
+  -webkit-animation: slideIn 0.15s ease-in forwards;
+  -moz-animation: slideIn 0.15s ease-in forwards;
+  animation: slideIn 0.15s ease-in forwards; }
+
+@-webkit-keyframes offset {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0px); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-30px); } }
+
+@-moz-keyframes offset {
+  0% {
+    opacity: 1;
+    -moz-transform: translateX(0px); }
+
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(-30px); } }
+
+@-o-keyframes offset {
+  0% {
+    opacity: 1;
+    -o-transform: translateX(0px); }
+
+  100% {
+    opacity: 0;
+    -o-transform: translateX(-30px); } }
+
+@keyframes offset {
+  0% {
+    opacity: 1;
+    transform: translateX(0px); }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-30px); } }
+
+@-webkit-keyframes slideIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-30px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px); } }
+
+@-moz-keyframes slideIn {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-30px); }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0px); } }
+
+@-o-keyframes slideIn {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(-30px); }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0px); } }
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px); }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px); } }
 
 [data-icon]:before {
   content: attr(data-icon);
@@ -1335,60 +1449,67 @@ body {
   overflow-x: hidden;
   line-height: 1.5; }
 
-#login-logo {
-  padding-bottom: 0;
-  -webkit-transition: all 0.45s ease;
-  -moz-transition: all 0.45s ease;
-  transition: all 0.45s ease; }
-
+#login-logo,
 #login-form {
-  height: 55%; }
-  #login-form #login-form-container {
-    -webkit-animation: welcome 0.55s ease-in;
-    -moz-animation: welcome 0.55s ease-in;
-    animation: welcome 0.55s ease-in;
-    -webkit-animation: fadeDown 0.45s ease-in;
-    -moz-animation: fadeDown 0.45s ease-in;
-    animation: fadeDown 0.45s ease-in;
-    max-width: 440px;
-    margin: 0 auto; }
-  #login-form #forgot, #login-form #back-to-login, #login-form header {
-    text-align: center;
-    margin-bottom: .75em; }
-    #login-form #forgot#forgot, #login-form #forgot#back-to-login, #login-form #back-to-login#forgot, #login-form #back-to-login#back-to-login, #login-form header#forgot, #login-form header#back-to-login {
-      margin-top: 4em; }
+  position: relative;
+  padding: 1em 0 !important; }
 
-#login-dolphin-logo {
-  -webkit-transition: background width height 0.2s ease-in-out;
-  -moz-transition: background width height 0.2s ease-in-out;
-  transition: background width height 0.2s ease-in-out;
-  background: #305e6e url(../img/logo-s.png) no-repeat;
-  background-position: center center;
-  margin: 0 auto;
-  width: 7.75em;
-  height: 7.75em;
-  border-radius: 50%; }
-  @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-    #login-dolphin-logo {
-      /* on retina, use image that's scaled by 2 */
-      background-image: url("../img/logo-s2x.png");
-      background-size: 248px 248px; } }
-  @media screen and (min-width: 47.5em) {
-    #login-dolphin-logo {
-      background: #305e6e url(../img/logo-b.png) no-repeat;
-      width: 11.5em;
-      height: 11.5em; } }
-    @media screen and (min-width: 47.5em) and (min--moz-device-pixel-ratio: 1.3), screen and (min-width: 47.5em) and (-o-min-device-pixel-ratio: 2.6 / 2), screen and (min-width: 47.5em) and (-webkit-min-device-pixel-ratio: 1.3), screen and (min-width: 47.5em) and (min-device-pixel-ratio: 1.3), screen and (min-width: 47.5em) and (min-resolution: 1.3dppx) {
-      #login-dolphin-logo {
+#login-logo {
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  transition: all 0.35s ease; }
+  #login-logo #login-dolphin-logo {
+    border: 8px solid white;
+    -webkit-animation: fadeUp 0.45s ease-in;
+    -moz-animation: fadeUp 0.45s ease-in;
+    animation: fadeUp 0.45s ease-in;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    -webkit-transition: background width height 0.2s ease-in-out;
+    -moz-transition: background width height 0.2s ease-in-out;
+    transition: background width height 0.2s ease-in-out;
+    background: #305e6e url(../img/logo-s.png) no-repeat;
+    background-position: center center;
+    margin: 0 auto 0 auto;
+    width: 7.75em;
+    height: 7.75em;
+    border-radius: 50%; }
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      #login-logo #login-dolphin-logo {
         /* on retina, use image that's scaled by 2 */
-        background-image: url("../img/logo-b2x.png");
-        background-size: 368px 368px; } }
+        background-image: url("../img/logo-s2x.png");
+        background-size: 124px 124px; } }
+    @media screen and (min-width: 47.5em) {
+      #login-logo #login-dolphin-logo {
+        border: 9px solid white;
+        background: #305e6e url(../img/logo-b.png) no-repeat;
+        background-position: center center;
+        width: 9em;
+        height: 9em; } }
+      @media screen and (min-width: 47.5em) and (min--moz-device-pixel-ratio: 1.3), screen and (min-width: 47.5em) and (-o-min-device-pixel-ratio: 2.6 / 2), screen and (min-width: 47.5em) and (-webkit-min-device-pixel-ratio: 1.3), screen and (min-width: 47.5em) and (min-device-pixel-ratio: 1.3), screen and (min-width: 47.5em) and (min-resolution: 1.3dppx) {
+        #login-logo #login-dolphin-logo {
+          /* on retina, use image that's scaled by 2 */
+          background-image: url("../img/logo-b2x.png");
+          background-size: 144px 144px; } }
 
-.form-container {
+#login-form #login-form-container {
+  position: relative;
+  -webkit-animation: fadeDown 0.35s ease-in;
+  -moz-animation: fadeDown 0.35s ease-in;
+  animation: fadeDown 0.35s ease-in;
+  max-width: 440px;
+  margin: 0 auto; }
+#login-form #forgot, #login-form #back-to-login, #login-form header {
+  text-align: center;
+  margin-bottom: .75em; }
+  #login-form #forgot#forgot, #login-form #forgot#back-to-login, #login-form #back-to-login#forgot, #login-form #back-to-login#back-to-login, #login-form header#forgot, #login-form header#back-to-login {
+    font-weight: bold;
+    margin-top: 4em; }
+
+.input-wrapper {
   position: relative;
   text-align: left;
   padding: 1.5em; }
-  .form-container header {
+  .input-wrapper header {
     text-align: center; }
-    .form-container header h2 {
+    .input-wrapper header h2 {
       letter-spacing: 0 !important; }

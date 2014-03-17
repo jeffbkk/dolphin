@@ -51,5 +51,55 @@ $(function() {
        });
 
 
+
+
+
+       // Login / Forgot passowrd form switching
+       // Caching element
+
+       var $forms = $('#login-form-container form'),
+           $currentForm = $('form.active'),
+           hidden = false,
+           $linkForm = $forms.find('.linkform');
+
+           // $forms.each(function(){
+           //    var theForm = $(this);
+
+           //    if (!theForm.hasClass('active')) 
+           //        theForm.hide();
+           // });
+
+
+           // je clique sur le lien
+
+           // le formulaire visible se barre
+              // on enleve la class visible et on met la class hidden du formulaire ou peut etre la class visible partout
+              // une fois la class visible enleve ==> on met notre formaulaure sur display none 
+              // nous mettons le formulaire sur display block 
+              // nous enlevons le class hidden et ajoutons la class visible
+
+              // je renvois faux 
+
+           $linkForm.bind('click', function(){
+
+             var $link = $(this),
+                 target = $link.attr('rel');
+                 $currentForm =  $('form:visible');
+                 console.log($currentForm);
+             
+             $('form').attr('class','').addClass('offset').delay(100).queue(function(){
+                $(this).attr('class','').addClass('hidden');
+                $currentForm = $('form.'+target);
+
+                $currentForm.removeClass('hidden').addClass('in').delay(100).queue(function(){
+                   $(this).removeClass('in').addClass('slideIn', 'active');
+                });
+
+             });
+
+             return false;
+           });
+
+
 	      
 });

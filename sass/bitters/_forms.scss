@@ -9,7 +9,8 @@ $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
 
 form {
-  margin-top: 1em;}
+  margin-top: 1em;
+}
 
 fieldset {
   background: lighten($base-border-color, 50);
@@ -29,9 +30,10 @@ select {
 }
 
 label {
-  // font-weight: bold;
+  font-weight: bold;
   // font-size: em(14);
   color: #33545F;
+  color: #5B96AC;
   margin-bottom: $base-line-height / 3;
 
   &.required:after {

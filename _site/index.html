@@ -31,7 +31,7 @@
 
  
   
-  <section id="login-logo" class ="half">
+  <section id="login-logo">
 
    <div class="container">
    	  <div id="login-dolphin-logo"></div>
@@ -41,7 +41,7 @@
 
 
 
-<section id="login-form" class ="half">
+<section id="login-form">
 
     <div class="container">
     	
@@ -56,7 +56,7 @@
                </header>
 		    
 		        <ul>
-		         <fieldset class ="form-container">
+		         <fieldset class ="input-wrapper">
 		        	<li>
 		        		<label for="email">Email</label>
 		        		<input type="email" name="email" id="email" required placeholder="Email" autofocus>
@@ -74,18 +74,20 @@
 		        </ul>
 
 		        <div id="forgot">
-                   <p><a href="#" data-link="login" >Forget password ?</a></p>
+                   <p><a href="#" class="linkform" rel="forgot-password" >Forget password ?</a></p>
 		        </div>
 	          </form>
 
-	          <!-- <form action="/" method ="post" class ="forgot-password">
+
+
+	          <form action="/" method ="post" class ="forgot-password hidden">
 
 	              <header>
                       <h2>Reset Password</h2>
                   </header>
 
 	          	  <ul>
-	          	  	<fieldset class ="form-container">
+	          	  	<fieldset class ="input-wrapper">
 	          	  		<li>
 	          	  			<label for="password-recovery">Email or Username</label>
 	          	  			<input type="text" name="password-recovery" autofocus id="password-recovery" required placeholder ='Email or Username'>
@@ -98,9 +100,9 @@
 	          	  </ul>
 
 	          	  <div id="back-to-login">
-	          	  	<p><a href="#" data-link="forgot-password">Back to Login</a></p>
+	          	  	<p><a href="#" class="linkform" rel="login">Back to Login</a></p>
 	          	  </div>
-	          </form> -->
+	          </form>
         </div>
 
     </div>
