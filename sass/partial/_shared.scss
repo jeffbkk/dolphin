@@ -2,36 +2,38 @@
 	box-shadow: 0 1px 2px rgba(black, .09);
 	background: white;}
 
+.has-gray {
+	box-shadow: 0 1px 2px rgba(black, .09);
+	background: #F5F9FB;}
+
 .input-wrapper {
 	padding: 1.5em;
 	@extend .has-shadow;
 }
 
-.offset {
-	@include animation( offset .15s  ease-in forwards );}
+.login,
+.forgot-password {
+	display:none;
+	position: relative;}
 
-.in {
-	opacity:0;
-	@include transform( translateX(-30px) );}
+.activated {
+	display: block;}
 
-.visible {
-	opacity:1;}
+.forgot-password.fadeOut,
+.login.fadeOut {
+	@include animation ( fadeOut .25s ease forwards);}
 
-.hidden {
-	@include transform( translateX(-30px) );
-	position: absolute;}
-
-.slideIn {
-	opacity:0;
-	@include animation( slideIn .15s ease-in forwards );}
+.forgot-password.fadeIn,
+.login.fadeIn {
+	display:block !important;
+	@include animation ( fadeIn .25s ease forwards);}
 
 
-@include keyframes(offset ) {
+@include keyframes( fadeOut ) {
    0% { opacity:1; @include transform( translateX(0px) );}
    100% { opacity:0; @include transform( translateX(-30px) );}}
 
 
-@include keyframes( slideIn) {
+@include keyframes( fadeIn ) {
    0% { opacity:0; @include transform( translateX(-30px) );}
-   100% { opacity:1; @include transform( translateX(0px) );}
-}
+   100% { opacity:1; @include transform( translateX(0px) );}}

@@ -83,6 +83,10 @@
         @include omega( 5n );
     }
 
+    .grid-4 {
+        @include span-columns( 4,15 );
+    }
+
     .grid-5 {
         @include span-columns( 5,15 );
     }

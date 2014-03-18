@@ -18,8 +18,9 @@ ul, ol {
 
 dl {
   @include inline-block;
-  margin: 0 8% 0 0; 
+  margin: 0 15% 1em 0; 
   text-align: center;
+  position: relative;
   font-size: em(14);
   line-height: $base-line-height;
 
@@ -31,15 +32,19 @@ dl {
 
   dd {
      margin: 0;
+     position: absolute;
+     top:5px;
+     left:35px;
+     display:inline !important;
      font-weight: 700;
      font-size: em(18);
      color:lighten($dark-gray, 2%);
 
      &.given-val {
-         color:#33545F;}
+         color:#5B96AC;}
      
      &.view-val {
-         color: #33545F;
+         color: #5B96AC;
      }
   }
 }

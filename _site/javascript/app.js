@@ -58,45 +58,38 @@ $(function() {
        // Caching element
 
        var $forms = $('#login-form-container form'),
-           $currentForm = $('form.active'),
-           hidden = false,
+           $currentForm = $('form.activated'),
            $linkForm = $forms.find('.linkform');
 
-           // $forms.each(function(){
-           //    var theForm = $(this);
-
-           //    if (!theForm.hasClass('active')) 
-           //        theForm.hide();
-           // });
-
-
-           // je clique sur le lien
-
-           // le formulaire visible se barre
-              // on enleve la class visible et on met la class hidden du formulaire ou peut etre la class visible partout
-              // une fois la class visible enleve ==> on met notre formaulaure sur display none 
-              // nous mettons le formulaire sur display block 
-              // nous enlevons le class hidden et ajoutons la class visible
-
-              // je renvois faux 
-
+           $forms.each(function(){
+              var $theForm = $(this);
+              if (!$theForm.hasClass('activated')) 
+                  $theForm.hide();
+           });
+           
            $linkForm.bind('click', function(){
-
+                 
              var $link = $(this),
                  target = $link.attr('rel');
-                 $currentForm =  $('form:visible');
-                 console.log($currentForm);
-             
-             $('form').attr('class','').addClass('offset').delay(100).queue(function(){
-                $(this).attr('class','').addClass('hidden');
-                $currentForm = $('form.'+target);
 
-                $currentForm.removeClass('hidden').addClass('in').delay(100).queue(function(){
-                   $(this).removeClass('in').addClass('slideIn', 'active');
-                });
+                      // $currentForm.fadeOut(250,function(){
+                      // $currentForm.removeClass('activated');
+                      // $currentForm = $('form.'+target);
 
-             });
+                      // $currentForm.addClass('activated');
+                      // $currentForm.fadeIn(250);
 
+
+                      $currentForm.removeClass('fadeIn').addClass('fadeOut').delay(400).queue(function(){
+                      $currentForm.removeClass('activated').removeClass('fadeOut').dequeue();
+
+                      $currentForm = $('form.'+target);
+
+                      $currentForm.addClass('activated');
+                      $currentForm.addClass('fadeIn');
+                      
+                 });
+           
              return false;
            });
 

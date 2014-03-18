@@ -32,7 +32,8 @@
 }
 
 .contents-main {
-	@extend .has-shadow;}
+	@extend .has-shadow;
+	@extend .has-gray;}
           
            .contents-title,
            .contents-text {

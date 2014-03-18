@@ -8,9 +8,12 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color
 $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
 
-form {
-  margin-top: 1em;
-}
+form header {
+    margin-bottom: .75em;}
+
+// form {
+//   margin-top: 1em;
+// }
 
 fieldset {
   background: lighten($base-border-color, 50);
@@ -31,10 +34,12 @@ select {
 
 label {
   font-weight: bold;
-  // font-size: em(14);
-  color: #33545F;
   color: #5B96AC;
   margin-bottom: $base-line-height / 3;
+
+  &.label-hidden {
+       display: none;
+  }
 
   &.required:after {
     content: "*";
@@ -83,7 +88,9 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 input[type="file"] {
-  width: 100%;
+  opacity:0;
+  @include appearance( none );
+  // width: 100%;
 }
 
 textarea {
@@ -152,8 +159,7 @@ input[type="submit"] {
 }
 
 .content-type {
-    display: none;
-}
+    display: none;}
 
 
 p.field-help {
@@ -162,6 +168,18 @@ p.field-help {
    color:#548B9F;
    max-height: 0;
    font-weight: bold;
-   font-size: em(14);
-}
+   font-size: em(14);}
+
+.user-gender {
+    @include inline-block;
+    // @include clearfix;
+    margin: 0 8% 0 0;
+    
+    label {
+        position: relative;
+        top:-2px;
+        float:right;
+    }
+  }
+
 

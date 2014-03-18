@@ -1,6 +1,6 @@
 .filter {
 	padding-bottom: em(6);
-                  position: relative;
+      position: relative;
 	margin-bottom: 2rem;
 	margin-bottom: 2em;
 
@@ -9,40 +9,43 @@
             #sort {
             	@include display-box;
             	li {
-            	        line-height: 22px;
-                                @include box-flex( 1 );
-                                text-align: center;
-            	        a {
-            		color:#69ADC5;
-                                    // font-weight: bold;
-            		&:hover {
+            	   line-height: 22px;
+                     @include box-flex( 1 );
+                     text-align: center;
+            	   a {
+            		color:white;
+                        text-shadow: none;
+                        background: #D7DBDD;
+                        padding: .2em 1em .35em;
+                        border-radius:em(16);
+s            		&:hover {
             		     color:#33545F;}
             		}
             	}
             }
 
-            @include media( $medium-screen ) {
-                        // text-align: right;
-                        border-bottom:1px solid lighten($light-gray, 3%);
-                        p { @include inline-block;  margin: 0 1em 0 0;}
+@include media( $medium-screen ) {
+            // text-align: right;
+            border-bottom:1px solid lighten($light-gray, 3%);
+            p { @include inline-block;  margin: 0 1em 0 0;}
 
 
-                        #sort {
-                        	display: block;
+            #sort {
+            	display: block;
 
-                        	li {
-                        	       line-height: auto;
-                                           @include box-flex( none );
-                        	       margin-bottom: 0 !important;
-            		       margin-right: 1rem;
-            		       margin-right: 1em;
-            		       @include inline-block;
-                        	}
-                        }
-
-
-
+            	li {
+            	line-height: auto;
+                  @include box-flex( none );
+            	margin-bottom: 0 !important;
+		      margin-right: 1rem;
+		      margin-right: 1em;
+		      @include inline-block;
+            	}
             }
+
+
+
+}
 
 
 }

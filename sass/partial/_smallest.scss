@@ -1,13 +1,14 @@
 body {
 	background: $base-body-background;
-            font: 100%/1.5 'Source Sans Pro', $helvetica;
-            font-smooth: subpixel-antialiased;
-            -ms-overflow-x: hidden;
-            position: relative;
-            width: 100%;
-            height: 100%;
-            overflow-x: hidden;
-            line-height: 1.5;}
+    background: #EAF0F2;
+    font: 100%/1.5 'Source Sans Pro', $helvetica;
+    font-smooth: subpixel-antialiased;
+    -ms-overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    line-height: 1.5;}
 
 #login-logo,
 #login-form {
@@ -39,24 +40,14 @@ body {
 
  }
 
- // form {
- //    position: absolute;
- //    top:1.5em;
- //    left:50%;
- //    z-index: 1000;
- //    margin-left: 220px;
- // }
-
-
-
  #login-form {
     #login-form-container {
         position: relative;
-        @include animation( fadeDown .35s  ease-in );
+        @include animation( fadeDown .45s  ease-in );
         max-width: 440px;
         margin: 0 auto;}
 
-    #forgot, #back-to-login, header {
+    #forgot, #back-to-login {
         text-align: center;
         margin-bottom: .75em;
 
